@@ -1,0 +1,130 @@
+{%  extends 'index.html' %}
+<!DOCTYPE html>
+<html>
+
+		<body>
+		{% block page-content%}
+		<div class="container min-height">
+			<div class="row-fluid">
+				<div class="span8">
+					{% for bbs in bbs_list%}
+					<div class="blog-post">
+						<div class="info">
+							<h4>First blog post {{ bbs.title}}</h4>
+							<p>
+								{{ bbs.content|truncatechars:100 }}
+							</p>
+						</div>
+						<div class="bottom">
+							<a href="blog.html#"><span class="label label-info">Snipp</span></a>
+							<a href="blog.html#"><span class="label label-info">Bootstrap</span></a>
+							<a href="blog.html#"><span class="label label-info">UI</span></a>
+							<a href="blog.html#"><span class="label label-info">growth</span></a>
+							<div class="pull-right">
+								<i class="icon-calendar"></i><b>{{bbs.author  }}</b> 发布: {{ bbs.publish_date|date:"Y-m-j H:i" }} <span class="marginlr5">|</span><i class="icon-comment"></i><a href="blog.html#">3 Comments</a>
+								<span class="marginlr5">|</span><i class="icon-share"></i><a href="blog.html#">39 Shares</a>
+							</div>
+						</div>
+					</div>
+					{% endfor%}
+					<div class="blog-post">
+						<div class="info">
+							<h4>First blog post</h4>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Maecenas tincidunt ornare tellus, a mollis dui venenatis quis.
+							</p>
+						</div>
+						<div class="bottom">
+							<a href="blog.html#"><span class="label label-info">Snipp</span></a>
+							<a href="blog.html#"><span class="label label-info">Bootstrap</span></a>
+							<a href="blog.html#"><span class="label label-info">UI</span></a>
+							<a href="blog.html#"><span class="label label-info">growth</span></a>
+							<div class="pull-right">
+								<i class="icon-calendar"></i> Sept 16th, 2012 at 4:20 pm <span class="marginlr5">|</span><i class="icon-comment"></i><a href="blog.html#">3 Comments</a>
+								<span class="marginlr5">|</span><i class="icon-share"></i><a href="blog.html#">39 Shares</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="span3 offset1 blog-sidebar">
+					<div class="input-append">
+						<input class="span8" id="appendedInputButtons" type="text">
+						<button class="btn" type="button">
+							Search
+						</button>
+					</div>
+					<h4>Category</h4>
+					<ul class="category">
+						<li>
+							<a href="blog.html#">First Category</a>
+						</li>
+						<li>
+							<a href="blog.html#">Second Category</a>
+						</li>
+						<li>
+							<a href="blog.html#">Second Category</a>
+						</li>
+						<li>
+							<a href="blog.html#">Another Category</a>
+						</li>
+						<li>
+							<a href="blog.html#">Second Category</a>
+						</li>
+					</ul>
+
+					<div>
+						<h4>Tag cloud</h4>
+						<hr class="small">
+						<a href="blog.html#" class="label label-info">Category</a>
+						<a href="blog.html#" class="label label-info">Beach</a>
+						<a href="blog.html#" class="label label-info">Chair</a>
+						<a href="blog.html#" class="label label-info">Category</a>
+						<a href="blog.html#" class="label label-info">Beach</a>
+						<a href="blog.html#" class="label label-info">Chair</a>
+						<a href="blog.html#" class="label label-info">Category</a>
+						<a href="blog.html#" class="label label-info">Beach</a>
+						<a href="blog.html#" class="label label-info">Chair</a>
+						<a href="blog.html#" class="label label-info">Category</a>
+						<a href="blog.html#" class="label label-info">Beach</a>
+						<a href="blog.html#" class="label label-info">Chair</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endblock%}	
+		<!-- footer -->
+		<!-- end footer -->
+
+		<!-- scripts>
+		<script src="static/js/jquery-1.8.0.min.js"></script>
+		<script src="static/js/jquery-ui-1.9.0.custom.min.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+		<script src="static/js/selectnav.min.js"></script>
+		<script src="static/js/jquery-easing.js"></script>
+		<script src="static/js/jquery.lavalamp.min.js"></script>
+		<script src="static/js/jquery.mobile.customized.min.js"></script>
+		<script src="static/js/camera.min.js"></script>
+		<script src="static/js/hoverIntent.js"></script>
+		<script src="static/js/jquery.isotope.min.js"></script>
+		<script src="static/js/jquery.animate-shadow-min.js"></script>
+		<script src="static/js/bootstrap-datepicker.js"></script>
+		<script src="static/js/jquery.validate.min.js"></script>
+		<script src="static/js/additional-methods.min.js"></script>
+		<script src="static/js/jquery.colorbox-min.js"></script>
+		<script src="static/js/jquery.bxslider.min.js"></script>
+		<script src="static/js/modernizr.custom.97074.js"></script>
+		<script src="static/js/jquery.hoverdir.js"></script>
+		<script src="static/js/standard.js"></script>
+
+		<script type="text/javascript">
+			// The twitter accounts that will be included in the ticker
+			var tweetUsers = ['speckyboy'];
+		</script>
+
+		<script src="static/js/jquery-twitter.js"></script>
+
+		 end scripts -->
+
+		</body>
+
+</html>

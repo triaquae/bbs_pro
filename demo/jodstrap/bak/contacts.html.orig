@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Jodstrap - contacts</title>
+
+		<!-- http://twitter.github.com/bootstrap/ -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- http://fontello.com/ -->
+		<link href="css/fontello.css" rel="stylesheet">
+		<!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+
+		<!-- http://kudakurage.com/ligature_symbols/ -->
+		<link href="css/ligature.css" rel="stylesheet">
+
+		<!-- http://www.pixedelic.com/plugins/camera/ -->
+		<link href="css/camera.css" rel="stylesheet">
+
+		<!-- http://isotope.metafizzy.co/ -->
+		<link href="css/isotope.css" rel="stylesheet">
+
+		<!-- https://github.com/eternicode/bootstrap-datepicker -->
+		<link href="css/datepicker.css" rel="stylesheet">
+
+		<!-- http://www.jacklmoore.com/colorbox -->
+		<link href="css/colorbox.css" rel="stylesheet">
+
+		<!-- http://bxslider.com/ -->
+		<link href="css/jquery.bxslider.css" rel="stylesheet" />
+
+		<!-- http://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/ -->
+		<link rel="stylesheet" type="text/css" href="css/hover-style.css" />
+
+		<!-- http://www.google.com/webfonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
+
+		<!-- saltflakes stylesheets -->
+		<link href="css/standard.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	</head>
+
+	<body>
+		<!-- navigation -->
+		<div class="container-fluid sf_nav">
+			<div class="navbar navbar-static-top">
+				<div class="navbar-inner">
+					<div class="container">
+
+						<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+						<!--
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</a>
+						-->
+
+						<!-- Be sure to leave the brand out there if you want it shown -->
+						<a class="brand myBrand" href="index.html"><img src="img/jodstrap-logo.png"></a>
+
+						<!-- Everything you want hidden at 940px or less, place within here -->
+						<!--<div class="nav-collapse">-->
+						<ul class="nav pull-right sf_navmenu navanimation sf-menu hidden-phone" id="sf-menu-responsive">
+							<li id="home" class="Lava selectedLava">
+								<a href="index.html">Home<span><span class="hidden-desktop"> - </span>homepage</span></a>
+							</li>
+							<li id="portfolio" class="Lava open-submenu">
+								<a href="portfolio.html">Portfolio <span><span class="hidden-desktop"> - </span>our products</span></a>
+								<ul class="navsub noLava">
+									<li class="noLava">
+										<a href="portfolio.html">Version 1</a>
+									</li>
+									<li class="noLava">
+										<a href="portfolio2.html">Version 2</a>
+									</li>
+								</ul>
+							</li>
+							<li id="blog" class="Lava">
+								<a href="blog.html" >Blog <span><span class="hidden-desktop"> - </span>our blog</span></a>
+							</li>
+							<li id="features" class="Lava open-submenu">
+								<a href="features.html">Features <span><span class="hidden-desktop"> - </span>colors & buttons</span></a>
+								<ul class="navsub noLava">
+									<li class="noLava">
+										<a href="features.html#sf-typography">Typography</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-icons">Icons</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-form-validation">Form & Validation</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-buttons">Buttons</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-alerts">Alerts</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-tabs">Tabs</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-table">Table</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-tooltips">Tooltips</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-popover">Popover</a>
+									</li>
+								</ul>
+							</li>
+							<li id="contacts" class="Lava">
+								<a href="contacts.html">Contacts <span><span class="hidden-desktop"> - </span>mail us</span></a>
+							</li>
+						</ul>
+						<!--</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- end navbar -->
+		</div>
+		<!-- end navigation -->
+
+		<!--
+		<div class="container" id="map_canvas" style="height: 500px;"></div>
+		-->
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span12">
+					<iframe width="100%" height="315" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=new+york&amp;aq=&amp;sll=50.121212,8.636564&amp;sspn=0.297171,0.837021&amp;t=v&amp;ie=UTF8&amp;hq=&amp;hnear=New+York,+United+States&amp;ll=40.714353,-74.005973&amp;spn=0.010978,0.026157&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span3">
+					<div class="title2">
+						<h2>Address</h2>
+						<h3>where we are</h3>
+					</div>
+					<hr>
+					<address>
+						<strong>Saltflakes Corporate</strong>
+						<br>
+						Chambers Steet
+						<br>
+						New York NY
+						<br>
+						USA
+						<br>
+						<abbr title="Phone">T:</abbr> +1 (123) 456-7890
+					</address>
+
+					<address>
+						<strong>Full Name</strong>
+						<br>
+						<a href="mailto:#">first.last@gmail.com</a>
+					</address>
+
+				</div>
+				<div class="span9">
+					<div class="title2">
+						<h2>Contact us</h2>
+						<h3>send a message</h3>
+					</div>
+					<hr>
+					<form id="sf-form" action='' method="POST">
+						<div class="row no-margin">
+							<div class="span4">
+								<select class="span12 sf-tooltip" id="inputGender" placeholder="Gender" rel="tooltip" data-placement="top" data-title="Gender">
+									<option>male</option>
+									<option>female</option>
+								</select>
+							</div>
+							<div class="span4">
+								<input type="text" id="name" name="name" placeholder="Name" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Name">
+							</div>
+							<div class="span4">
+								<input type="text" id="email" name="email" placeholder="email" class="span12 required email sf-tooltip" rel="tooltip" data-placement="top" data-title="email">
+							</div>
+						</div>
+						<div class="row no-margin">
+							<div class="span12">
+								<textarea rows="5" id="message" name="message" placeholder="Message..." class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Message..."></textarea>
+							</div>
+						</div>
+						<button class="btn">
+							Send
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="container_fluid sf_footer">
+			<div class="container">
+				<div class="row-fluid">
+					<div class="span4">
+						<h4>Recent Posts</h4>
+						<a href="#">Macbook Pro for $1</a>
+						<hr>
+						<a href="#">Awesome iPad givaway</a>
+						<hr>
+						<a href="#">Sneak preview of iOS 7</a>
+						<hr>
+						<a href="#">Awesome portfolio web design</a>
+					</div>
+					<div class="span4">
+						<h4>Recent Tweets</h4>
+
+						<ul class="unstyled" id="twitter-ticker">
+
+							<div id="tweet-container">
+								Loading..
+							</div>
+
+						</ul>
+
+					</div>
+					<div class="span4">
+						<h4>Newsletter</h4>
+						<p>
+							Subscribe to our newsletter to receive emails about new blog posts.
+						</p>
+						<form id="newsletter" action='' method="POST">
+							<div class="row no-margin">
+								<div class="span12">
+									<input type="text" id="name" name="name" placeholder="Name" class="span12 required">
+								</div>
+							</div>
+							<div class="row no-margin">
+								<div class="span12">
+									<input type="text" id="email" name="email" placeholder="email" class="span12 required email">
+								</div>
+							</div>
+
+							<button class="btn">
+								Subscribe
+							</button>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end footer -->
+
+		<!-- scripts -->
+		<script src="js/jquery-1.8.0.min.js"></script>
+		<script src="js/jquery-ui-1.9.0.custom.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/selectnav.min.js"></script>
+		<script src="js/jquery-easing.js"></script>
+		<script src="js/jquery.lavalamp.min.js"></script>
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<script src="js/camera.min.js"></script>
+		<script src="js/hoverIntent.js"></script>
+		<script src="js/jquery.isotope.min.js"></script>
+		<script src="js/jquery.animate-shadow-min.js"></script>
+		<script src="js/bootstrap-datepicker.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/additional-methods.min.js"></script>
+		<script src="js/jquery.colorbox-min.js"></script>
+		<script src="js/jquery.bxslider.min.js"></script>
+		<script src="js/modernizr.custom.97074.js"></script>
+		<script src="js/jquery.hoverdir.js"></script>
+		<script src="js/standard.js"></script>
+
+		<script type="text/javascript">
+			// The twitter accounts that will be included in the ticker
+			var tweetUsers = ['speckyboy'];
+		</script>
+
+		<script src="js/jquery-twitter.js"></script>
+
+		<!-- end scripts -->
+
+	</body>
+
+</html>

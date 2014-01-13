@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Jodstrap</title>
+
+		<!-- http://twitter.github.com/bootstrap/ -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- http://fontello.com/ -->
+		<link href="css/fontello.css" rel="stylesheet">
+		<!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+
+		<!-- http://kudakurage.com/ligature_symbols/ -->
+		<link href="css/ligature.css" rel="stylesheet">
+
+		<!-- http://www.pixedelic.com/plugins/camera/ -->
+		<link href="css/camera.css" rel="stylesheet">
+
+		<!-- http://isotope.metafizzy.co/ -->
+		<link href="css/isotope.css" rel="stylesheet">
+
+		<!-- https://github.com/eternicode/bootstrap-datepicker -->
+		<link href="css/datepicker.css" rel="stylesheet">
+
+		<!-- http://www.jacklmoore.com/colorbox -->
+		<link href="css/colorbox.css" rel="stylesheet">
+
+		<!-- http://bxslider.com/ -->
+		<link href="css/jquery.bxslider.css" rel="stylesheet" />
+
+		<!-- http://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/ -->
+		<link rel="stylesheet" type="text/css" href="css/hover-style.css" />
+
+		<!-- http://www.google.com/webfonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
+
+		<!-- saltflakes stylesheets -->
+		<link href="css/standard.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	</head>
+
+	<body>
+		<!-- navigation -->
+		<div class="container-fluid sf_nav">
+			<div class="navbar navbar-static-top">
+				<div class="navbar-inner">
+					<div class="container">
+
+						<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+						<!--
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</a>
+						-->
+
+						<!-- Be sure to leave the brand out there if you want it shown -->
+						<a class="brand myBrand" href="index.html"><img src="img/jodstrap-logo.png"></a>
+
+						<!-- Everything you want hidden at 940px or less, place within here -->
+						<!--<div class="nav-collapse">-->
+						<ul class="nav pull-right sf_navmenu navanimation sf-menu hidden-phone" id="sf-menu-responsive">
+							<li id="home" class="Lava selectedLava">
+								<a href="index.html">Home<span><span class="hidden-desktop"> - </span>homepage</span></a>
+							</li>
+							<li id="portfolio" class="Lava open-submenu">
+								<a href="portfolio.html">Portfolio <span><span class="hidden-desktop"> - </span>our products</span></a>
+								<ul class="navsub noLava">
+									<li class="noLava">
+										<a href="portfolio.html">Version 1</a>
+									</li>
+									<li class="noLava">
+										<a href="portfolio2.html">Version 2</a>
+									</li>
+								</ul>
+							</li>
+							<li id="blog" class="Lava">
+								<a href="blog.html" >Blog <span><span class="hidden-desktop"> - </span>our blog</span></a>
+							</li>
+							<li id="features" class="Lava open-submenu">
+								<a href="features.html">Features <span><span class="hidden-desktop"> - </span>colors & buttons</span></a>
+								<ul class="navsub noLava">
+									<li class="noLava">
+										<a href="features.html#sf-typography">Typography</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-icons">Icons</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-form-validation">Form & Validation</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-buttons">Buttons</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-alerts">Alerts</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-tabs">Tabs</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-table">Table</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-tooltips">Tooltips</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-popover">Popover</a>
+									</li>
+								</ul>
+							</li>
+							<li id="contacts" class="Lava">
+								<a href="contacts.html">Contacts <span><span class="hidden-desktop"> - </span>mail us</span></a>
+							</li>
+						</ul>
+						<!--</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- end navbar -->
+		</div>
+		<!-- end navigation -->
+
+		<!-- camera slider -->
+		<div class="container offset-top-xl">
+			<div class="camera_wrap camera_white_skin" id="camera_wrap_1">
+				<div data-thumb="images/slides/thumbs/bridge.jpg" data-src="images/slides/bridge.jpg">
+					<div class="camera_caption fadeFromBottom">
+						Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
+					</div>
+				</div>
+				<div data-thumb="images/slides/thumbs/leaf.jpg" data-src="images/slides/leaf.jpg">
+					<div class="camera_caption fadeFromBottom">
+						It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
+					</div>
+				</div>
+				<div data-thumb="images/slides/thumbs/road.jpg" data-src="images/slides/road.jpg">
+					<div class="camera_caption fadeFromBottom">
+						<em>It's completely free</em> (even if a donation is appreciated)
+					</div>
+				</div>
+				<div data-thumb="images/slides/thumbs/sea.jpg" data-src="images/slides/sea.jpg">
+					<div class="camera_caption fadeFromBottom">
+						Camera slideshow provides many options <em>to customize your project</em> as more as possible
+					</div>
+				</div>
+				<div data-thumb="images/slides/thumbs/shelter.jpg" data-src="images/slides/shelter.jpg">
+					<div class="camera_caption fadeFromBottom">
+						It supports captions, HTML elements and videos and <em>it's validated in HTML5</em> (<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pixedelic.com%2Fplugins%2Fcamera%2F&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0&amp;user-agent=W3C_Validator%2F1.2" target="_blank">have a look</a>)
+					</div>
+				</div>
+				<div data-thumb="images/slides/thumbs/tree.jpg" data-src="images/slides/tree.jpg">
+					<div class="camera_caption fadeFromBottom">
+						Different color skins and layouts available, <em>fullscreen ready too</em>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end camera slider -->
+
+		<!-- content area -->
+		<div class="container">
+			<!-- welcome text -->
+			<div class="row-fluid" align="center">
+				<hr>
+				<h4>Responsive Blog and Portfolio Design</h4>
+				<p>
+					Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Maecenas tincidunt ornare tellus, a mollis dui venenatis quis.
+				</p>
+				<hr>
+			</div>
+			<!-- end welcome text -->
+
+			<!-- row for images -->
+			<div class="row-fluid offset-both">
+				<div class="span3">
+					<div class="offset-bottom"><img src="misc/baking-cookies.jpg" />
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
+					</p>
+				</div>
+				<div class="span3">
+					<div class="offset-bottom"><img src="misc/traffic.jpg" />
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
+					</p>
+				</div>
+				<div class="span3">
+					<div class="offset-bottom"><img src="misc/young-man-enjoying-his-freedomrejoicing-from-his-success-in-the.jpg" />
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
+					</p>
+				</div>
+				<div class="span3">
+					<div class="offset-bottom"><img src="misc/red-hair-fashion-girl-portrait.jpg" />
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
+					</p>
+				</div>
+			</div>
+			<!-- end row for images -->
+
+			<div class="row-fluid offset-both">
+				<!-- column one infobox -->
+				<div class="span6">
+					<h4>Headline</h4>
+					<hr>
+					<div>
+						<div class="span6">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitu.
+							</p>
+							<p>
+								Metus vitae urna sollicitudin eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lor pera adomrar dolor libadon se cule padore a folodurento.
+							</p>
+						</div>
+						<div class="span6">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Pellentesque eu posuere leo.
+								Pellentesque a Design erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
+								Maecenas vel metus vitae urna sollicitudin eleifend.
+							</p>
+							<a href="index.html#">Follow this link</a>
+						</div>
+					</div>
+				</div>
+				<!-- end column one infobox -->
+
+				<!-- column two quotes -->
+				<div class="span6">
+					<h4>Client Testimonials</h4>
+					<hr>
+					<blockquote>
+						<em>This it the best Design I have ever seen! It's based on Bootstrap so customizing was very easy and fast.</em>
+						<small><b>Peter Salt</b> <cite title="Source Title">Sept 16th, 2012 at 4:20 pm</cite></small>
+					</blockquote>
+					<blockquote>
+						<em>This it the best Design I have ever seen! It's based on Bootstrap so customizing was very easy and fast.</em>
+						<small><b>Peter Salt</b> <cite title="Source Title">Sept 16th, 2012 at 4:20 pm</cite></small>
+					</blockquote>
+					<blockquote>
+						<em>This it the best Design I have ever seen! It's based on Bootstrap so customizing was very easy and fast.</em>
+						<small><b>Peter Salt</b> <cite title="Source Title">Sept 16th, 2012 at 4:20 pm</cite></small>
+					</blockquote>
+				</div>
+				<!-- end column two quotes -->
+			</div>
+		</div>
+		<!-- end content area -->
+
+		<!-- footer -->
+		<div class="container_fluid sf_footer">
+			<div class="container">
+				<div class="row-fluid">
+					<div class="span4">
+						<h4>Recent Posts</h4>
+						<a href="index.html#">Macbook Pro for $1</a>
+						<hr>
+						<a href="index.html#">Awesome iPad givaway</a>
+						<hr>
+						<a href="index.html#">Sneak preview of iOS 7</a>
+						<hr>
+						<a href="index.html#">Awesome portfolio web design</a>
+					</div>
+					<div class="span4">
+						<h4>Recent Tweets</h4>
+
+						<ul class="unstyled" id="twitter-ticker">
+
+							<div id="tweet-container">
+								Loading..
+							</div>
+
+						</ul>
+
+					</div>
+					<div class="span4">
+						<h4>Newsletter</h4>
+						<p>
+							Subscribe to our newsletter to receive emails about new blog posts.
+						</p>
+						<form id="newsletter" action='index.html' method="POST">
+							<div class="row no-margin">
+								<div class="span12">
+									<input type="text" id="name" name="name" placeholder="Name" class="span12 required">
+								</div>
+							</div>
+							<div class="row no-margin">
+								<div class="span12">
+									<input type="text" id="email" name="email" placeholder="email" class="span12 required email">
+								</div>
+							</div>
+
+							<button class="btn">
+								Subscribe
+							</button>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end footer -->
+
+		<!-- scripts -->
+		<script src="js/jquery-1.8.0.min.js"></script>
+		<script src="js/jquery-ui-1.9.0.custom.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/selectnav.min.js"></script>
+		<script src="js/jquery-easing.js"></script>
+		<script src="js/jquery.lavalamp.min.js"></script>
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<script src="js/camera.min.js"></script>
+		<script src="js/hoverIntent.js"></script>
+		<script src="js/jquery.isotope.min.js"></script>
+		<script src="js/jquery.animate-shadow-min.js"></script>
+		<script src="js/bootstrap-datepicker.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/additional-methods.min.js"></script>
+		<script src="js/jquery.colorbox-min.js"></script>
+		<script src="js/jquery.bxslider.min.js"></script>
+		<script src="js/modernizr.custom.97074.js"></script>
+		<script src="js/jquery.hoverdir.js"></script>
+		<script src="js/standard.js"></script>
+
+		<script type="text/javascript">
+			// The twitter accounts that will be included in the ticker
+			var tweetUsers = ['speckyboy'];
+		</script>
+
+		<script src="js/jquery-twitter.js"></script>
+
+		<!-- end scripts -->
+
+	</body>
+
+</html>

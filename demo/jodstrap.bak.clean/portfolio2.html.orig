@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Jodstrap - portfolio</title>
+
+		<!-- http://twitter.github.com/bootstrap/ -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- http://fontello.com/ -->
+		<link href="css/fontello.css" rel="stylesheet">
+		<!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+
+		<!-- http://kudakurage.com/ligature_symbols/ -->
+		<link href="css/ligature.css" rel="stylesheet">
+
+		<!-- http://www.pixedelic.com/plugins/camera/ -->
+		<link href="css/camera.css" rel="stylesheet">
+
+		<!-- http://isotope.metafizzy.co/ -->
+		<link href="css/isotope.css" rel="stylesheet">
+
+		<!-- https://github.com/eternicode/bootstrap-datepicker -->
+		<link href="css/datepicker.css" rel="stylesheet">
+
+		<!-- http://www.jacklmoore.com/colorbox -->
+		<link href="css/colorbox.css" rel="stylesheet">
+
+		<!-- http://bxslider.com/ -->
+		<link href="css/jquery.bxslider.css" rel="stylesheet" />
+
+		<!-- http://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/ -->
+		<link rel="stylesheet" type="text/css" href="css/hover-style.css" />
+
+		<!-- http://www.google.com/webfonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
+
+		<!-- saltflakes stylesheets -->
+		<link href="css/standard.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	</head>
+
+	<body>
+		<!-- navigation -->
+		<div class="container-fluid sf_nav">
+			<div class="navbar navbar-static-top">
+				<div class="navbar-inner">
+					<div class="container">
+
+						<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+						<!--
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</a>
+						-->
+
+						<!-- Be sure to leave the brand out there if you want it shown -->
+						<a class="brand myBrand" href="index.html"><img src="img/jodstrap-logo.png"></a>
+
+						<!-- Everything you want hidden at 940px or less, place within here -->
+						<!--<div class="nav-collapse">-->
+						<ul class="nav pull-right sf_navmenu navanimation sf-menu hidden-phone" id="sf-menu-responsive">
+							<li id="home" class="Lava selectedLava">
+								<a href="index.html">Home<span><span class="hidden-desktop"> - </span>homepage</span></a>
+							</li>
+							<li id="portfolio" class="Lava open-submenu">
+								<a href="portfolio.html">Portfolio <span><span class="hidden-desktop"> - </span>our products</span></a>
+								<ul class="navsub noLava">
+									<li class="noLava">
+										<a href="portfolio.html">Version 1</a>
+									</li>
+									<li class="noLava">
+										<a href="portfolio2.html">Version 2</a>
+									</li>
+								</ul>
+							</li>
+							<li id="blog" class="Lava">
+								<a href="blog.html" >Blog <span><span class="hidden-desktop"> - </span>our blog</span></a>
+							</li>
+							<li id="features" class="Lava open-submenu">
+								<a href="features.html">Features <span><span class="hidden-desktop"> - </span>colors & buttons</span></a>
+								<ul class="navsub noLava">
+									<li class="noLava">
+										<a href="features.html#sf-typography">Typography</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-icons">Icons</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-form-validation">Form & Validation</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-buttons">Buttons</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-alerts">Alerts</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-tabs">Tabs</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-table">Table</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-tooltips">Tooltips</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-popover">Popover</a>
+									</li>
+								</ul>
+							</li>
+							<li id="contacts" class="Lava">
+								<a href="contacts.html">Contacts <span><span class="hidden-desktop"> - </span>mail us</span></a>
+							</li>
+						</ul>
+						<!--</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- end navbar -->
+		</div>
+		<!-- end navigation -->
+
+		<div class="container min-height">
+			<div class="row-fluid">
+				<div class="span12">
+
+					<ul id="da-filters" class="sf-da-isotope-filters">
+						<li class="active">
+							<a href="#" data-filter="*">ALL</a>
+						</li>
+						<li>
+							<a href="#" data-filter=".people">PEOPLE</a>
+						</li>
+						<li>
+							<a href="#" data-filter=".woman">WOMAN</a>
+						</li>
+						<li>
+							<a href="#" data-filter=".nature">NATURE</a>
+						</li>
+						<li>
+							<a href="#" data-filter=".rest">AND THE REST</a>
+						</li>
+					</ul>
+					<hr>
+					<ul id="da-thumbs" class="sf-da-isotope da-thumbs">
+						<li class="sf-da-item">
+							<a href="portfolio_details.html"> <img src="misc/blowball-on-dark-blue-background.jpg" />
+							<div>
+								<span>BLOWBALL IN THE WIND</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item">
+							<a href="portfolio_details.html"> <img src="misc/bike-background.jpg" />
+							<div>
+								<span>CYCLE IN THE CLOUD</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item people">
+							<a href="portfolio_details.html"> <img src="misc/vogue-style-portrait-of-a-woman-with-bw-makeup.jpg" />
+							<div>
+								<span>BLACK AND WHITE</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item">
+							<a href="portfolio_details.html"> <img src="misc/lioness-teeth.jpg" />
+							<div>
+								<span>ANGRY LION</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item">
+							<a href="portfolio_details.html"> <img src="misc/traffic.jpg" />
+							<div>
+								<span>HIGHWAY TRAFFIC</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item people">
+							<a href="portfolio_details.html"> <img src="misc/fantasy-glamor-portrait-of-a-young-beauty.jpg" />
+							<div>
+								<span>YOUNG BEAUTY</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item">
+							<a href="portfolio_details.html"> <img src="misc/young-man-enjoying-his-freedomrejoicing-from-his-success-in-the.jpg" />
+							<div>
+								<span>ENJOYING FREEDOM</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item">
+							<a href="portfolio_details.html"> <img src="misc/woman-with-hair-fluttering-in-wind-closeup.jpg" />
+							<div>
+								<span>FLUTTERING HAIR</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item">
+							<a href="portfolio_details.html"> <img src="misc/happy-family.jpg" />
+							<div>
+								<span>HAPPY FAMILY</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item nature">
+							<a href="portfolio_details.html"> <img src="misc/blowball-on-dark-blue-background.jpg" />
+							<div>
+								<span>BLOWBALL IN THE WIND</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item nature">
+							<a href="portfolio_details.html"> <img src="misc/somalia-grunge-flag.jpg" />
+							<div>
+								<span>STAR ON FLAG</span>
+							</div> </a>
+						</li>
+						<li class="sf-da-item">
+							<a href="portfolio_details.html"> <img src="misc/hawaiian-vacation-sunset-concept.jpg" />
+							<div>
+								<span>VACATION SUNSET</span>
+							</div> </a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="container_fluid sf_footer">
+			<div class="container">
+				<div class="row-fluid">
+					<div class="span4">
+						<h4>Recent Posts</h4>
+						<a href="#">Macbook Pro for $1</a>
+						<hr>
+						<a href="#">Awesome iPad givaway</a>
+						<hr>
+						<a href="#">Sneak preview of iOS 7</a>
+						<hr>
+						<a href="#">Awesome portfolio web design</a>
+					</div>
+					<div class="span4">
+						<h4>Recent Tweets</h4>
+
+						<ul class="unstyled" id="twitter-ticker">
+
+							<div id="tweet-container">
+								Loading..
+							</div>
+
+						</ul>
+
+					</div>
+					<div class="span4">
+						<h4>Newsletter</h4>
+						<p>
+							Subscribe to our newsletter to receive emails about new blog posts.
+						</p>
+						<form id="newsletter" action='' method="POST">
+							<div class="row no-margin">
+								<div class="span12">
+									<input type="text" id="name" name="name" placeholder="Name" class="span12 required">
+								</div>
+							</div>
+							<div class="row no-margin">
+								<div class="span12">
+									<input type="text" id="email" name="email" placeholder="email" class="span12 required email">
+								</div>
+							</div>
+
+							<button class="btn">
+								Subscribe
+							</button>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end footer -->
+
+		<!-- scripts -->
+		<script src="js/jquery-1.8.0.min.js"></script>
+		<script src="js/jquery-ui-1.9.0.custom.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/selectnav.min.js"></script>
+		<script src="js/jquery-easing.js"></script>
+		<script src="js/jquery.lavalamp.min.js"></script>
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<script src="js/camera.min.js"></script>
+		<script src="js/hoverIntent.js"></script>
+		<script src="js/jquery.isotope.min.js"></script>
+		<script src="js/jquery.animate-shadow-min.js"></script>
+		<script src="js/bootstrap-datepicker.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/additional-methods.min.js"></script>
+		<script src="js/jquery.colorbox-min.js"></script>
+		<script src="js/jquery.bxslider.min.js"></script>
+		<script src="js/modernizr.custom.97074.js"></script>
+		<script src="js/jquery.hoverdir.js"></script>
+		<script src="js/standard.js"></script>
+
+		<script type="text/javascript">
+			// The twitter accounts that will be included in the ticker
+			var tweetUsers = ['speckyboy'];
+		</script>
+
+		<script src="js/jquery-twitter.js"></script>
+
+		<!-- end scripts -->
+
+	</body>
+
+</html>

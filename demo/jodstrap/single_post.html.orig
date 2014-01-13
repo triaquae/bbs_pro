@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Jodstrap - blog</title>
+
+		<!-- http://twitter.github.com/bootstrap/ -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- http://fontello.com/ -->
+		<link href="css/fontello.css" rel="stylesheet">
+		<!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+
+		<!-- http://kudakurage.com/ligature_symbols/ -->
+		<link href="css/ligature.css" rel="stylesheet">
+
+		<!-- http://www.pixedelic.com/plugins/camera/ -->
+		<link href="css/camera.css" rel="stylesheet">
+
+		<!-- http://isotope.metafizzy.co/ -->
+		<link href="css/isotope.css" rel="stylesheet">
+
+		<!-- https://github.com/eternicode/bootstrap-datepicker -->
+		<link href="css/datepicker.css" rel="stylesheet">
+
+		<!-- http://www.jacklmoore.com/colorbox -->
+		<link href="css/colorbox.css" rel="stylesheet">
+
+		<!-- http://bxslider.com/ -->
+		<link href="css/jquery.bxslider.css" rel="stylesheet" />
+
+		<!-- http://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/ -->
+		<link rel="stylesheet" type="text/css" href="css/hover-style.css" />
+
+		<!-- http://www.google.com/webfonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
+
+		<!-- saltflakes stylesheets -->
+		<link href="css/standard.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	</head>
+
+	<body>
+		<!-- navigation -->
+		<div class="container-fluid sf_nav">
+			<div class="navbar navbar-static-top">
+				<div class="navbar-inner">
+					<div class="container">
+
+						<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+						<!--
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</a>
+						-->
+
+						<!-- Be sure to leave the brand out there if you want it shown -->
+						<a class="brand myBrand" href="index.html"><img src="img/jodstrap-logo.png"></a>
+
+						<!-- Everything you want hidden at 940px or less, place within here -->
+						<!--<div class="nav-collapse">-->
+						<ul class="nav pull-right sf_navmenu navanimation sf-menu hidden-phone" id="sf-menu-responsive">
+							<li id="home" class="Lava selectedLava">
+								<a href="index.html">Home<span><span class="hidden-desktop"> - </span>homepage</span></a>
+							</li>
+							<li id="portfolio" class="Lava open-submenu">
+								<a href="portfolio.html">Portfolio <span><span class="hidden-desktop"> - </span>our products</span></a>
+								<ul class="navsub noLava">
+									<li class="noLava">
+										<a href="portfolio.html">Version 1</a>
+									</li>
+									<li class="noLava">
+										<a href="portfolio2.html">Version 2</a>
+									</li>
+								</ul>
+							</li>
+							<li id="blog" class="Lava">
+								<a href="blog.html" >Blog <span><span class="hidden-desktop"> - </span>our blog</span></a>
+							</li>
+							<li id="features" class="Lava open-submenu">
+								<a href="features.html">Features <span><span class="hidden-desktop"> - </span>colors & buttons</span></a>
+								<ul class="navsub noLava">
+									<li class="noLava">
+										<a href="features.html#sf-typography">Typography</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-icons">Icons</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-form-validation">Form & Validation</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-buttons">Buttons</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-alerts">Alerts</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-tabs">Tabs</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-table">Table</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-tooltips">Tooltips</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-popover">Popover</a>
+									</li>
+								</ul>
+							</li>
+							<li id="contacts" class="Lava">
+								<a href="contacts.html">Contacts <span><span class="hidden-desktop"> - </span>mail us</span></a>
+							</li>
+						</ul>
+						<!--</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- end navbar -->
+		</div>
+		<!-- end navigation -->
+
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span8">
+					<div class="blog-post">
+						<div class="image">
+							<a href="#"> <img src="misc/post2.png"> </a>
+						</div>
+						<div class="info">
+							<h4>First blog post</h4>
+
+							<p>
+								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+							</p>
+
+							<p>
+								Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+							</p>
+							<p>
+								<br>
+								<blockquote>
+									<em>This it the best Design I have ever seen! It's based on Bootstrap so customizing was very easy and fast.</em>
+									<small><b>Peter Salt</b> <cite title="Source Title">27th July 2012</cite></small>
+								</blockquote>
+								<br>
+							</p>
+							<p>
+								Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+							</p>
+
+							<p>
+								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+							</p>
+
+						</div>
+						<div class="bottom">
+							<a href="#"><span class="label label-info">Snipp</span></a>
+							<a href="#"><span class="label label-info">Bootstrap</span></a>
+							<a href="#"><span class="label label-info">UI</span></a>
+							<a href="#"><span class="label label-info">growth</span></a>
+							<div class="pull-right">
+								<i class="icon-calendar"></i> Sept 16th, 2012 at 4:20 pm <span class="marginlr5">|</span><i class="icon-comment"></i><a href="#">3 Comments</a>
+								<span class="marginlr5">|</span><i class="icon-share"></i><a href="#">39 Shares</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="row-fluid">
+						<h4>About the Author</h4>
+						<hr>
+						<div class="row">
+							<div class="span2">
+								<img class="margin20" src="misc/fashion-brunette-model-portrait-hairstyle.jpg">
+							</div>
+							<div class="span10">
+								<h3>Petra Snow</h3>
+								<p>
+									Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+								</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row-fluid">
+						<h4>Comments</h4>
+						<hr>
+						<div class="media">
+							<a class="pull-left" href="#"> <img class="media-object" width="64px" height="64px" src="misc/senior-small.jpg"> </a>
+							<div class="media-body">
+								<h4 class="media-heading">Media heading</h4>
+								<p>
+									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+								</p>
+								<!-- Nested media object -->
+								<div class="media">
+									<a class="pull-left" href="#"> <img class="media-object" width="64px" height="64px" src="misc/senior-small.jpg"> </a>
+									<div class="media-body">
+										<h4 class="media-heading">Nested media heading</h4>
+										Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+										<!-- Nested media object -->
+										<div class="media">
+											<a class="pull-left" href="#"> <img class="media-object" width="64px" height="64px" src="misc/senior-small.jpg"> </a>
+											<div class="media-body">
+												<h4 class="media-heading">Nested media heading</h4>
+												Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Nested media object -->
+								<div class="media">
+									<a class="pull-left" href="#"> <img class="media-object" width="64px" height="64px" src="misc/senior-small.jpg"> </a>
+									<div class="media-body">
+										<h4 class="media-heading">Nested media heading</h4>
+										Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row-fluid">
+						<h4>Leave a comment</h4>
+						<hr>
+						<form id="sf-form" action='' method="POST">
+							<div class="row no-margin">
+								<div class="span4">
+									<input type="text" id="name" name="name" placeholder="Name" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Name">
+								</div>
+								<div class="span4">
+									<input type="text" id="website" name="website" placeholder="Website" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Website">
+								</div>
+								<div class="span4">
+									<input type="text" id="email" name="email" placeholder="email" class="span12 required email sf-tooltip" rel="tooltip" data-placement="top" data-title="email">
+								</div>
+							</div>
+
+							<div class="row no-margin">
+								<div class="span12">
+									<textarea rows="5" id="comment" name="comment" placeholder="Comment..." class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Comment..."></textarea>
+								</div>
+							</div>
+							<button class="btn">
+								Post
+							</button>
+						</form>
+					</div>
+
+				</div>
+				<div class="span3 offset1 blog-sidebar">
+					<div class="input-append">
+						<input class="span8" id="appendedInputButtons" type="text">
+						<button class="btn" type="button">
+							Search
+						</button>
+					</div>
+					<h4>Category</h4>
+					<ul class="category">
+						<li>
+							<a href="#">First Category</a>
+						</li>
+						<li>
+							<a href="#">Second Category</a>
+						</li>
+						<li>
+							<a href="#">Second Category</a>
+						</li>
+						<li>
+							<a href="#">Another Category</a>
+						</li>
+						<li>
+							<a href="#">Second Category</a>
+						</li>
+					</ul>
+
+					<div>
+						<h4>Tag cloud</h4>
+						<a href="#" class="label label-info">Category</a>
+						<a href="#" class="label label-info">Beach</a>
+						<a href="#" class="label label-info">Chair</a>
+						<a href="#" class="label label-info">Category</a>
+						<a href="#" class="label label-info">Beach</a>
+						<a href="#" class="label label-info">Chair</a>
+						<a href="#" class="label label-info">Category</a>
+						<a href="#" class="label label-info">Beach</a>
+						<a href="#" class="label label-info">Chair</a>
+						<a href="#" class="label label-info">Category</a>
+						<a href="#" class="label label-info">Beach</a>
+						<a href="#" class="label label-info">Chair</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="container_fluid sf_footer">
+			<div class="container">
+				<div class="row-fluid">
+					<div class="span4">
+						<h4>Recent Posts</h4>
+						<a href="#">Macbook Pro for $1</a>
+						<hr>
+						<a href="#">Awesome iPad givaway</a>
+						<hr>
+						<a href="#">Sneak preview of iOS 7</a>
+						<hr>
+						<a href="#">Awesome portfolio web design</a>
+					</div>
+					<div class="span4">
+						<h4>Recent Tweets</h4>
+
+						<ul class="unstyled" id="twitter-ticker">
+
+							<div id="tweet-container">
+								Loading..
+							</div>
+
+						</ul>
+
+					</div>
+					<div class="span4">
+						<h4>Newsletter</h4>
+						<p>
+							Subscribe to our newsletter to receive emails about new blog posts.
+						</p>
+						<form id="newsletter" action='' method="POST">
+							<div class="row no-margin">
+								<div class="span12">
+									<input type="text" id="name" name="name" placeholder="Name" class="span12 required">
+								</div>
+							</div>
+							<div class="row no-margin">
+								<div class="span12">
+									<input type="text" id="email" name="email" placeholder="email" class="span12 required email">
+								</div>
+							</div>
+
+							<button class="btn">
+								Subscribe
+							</button>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end footer -->
+
+		<!-- scripts -->
+		<script src="js/jquery-1.8.0.min.js"></script>
+		<script src="js/jquery-ui-1.9.0.custom.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/selectnav.min.js"></script>
+		<script src="js/jquery-easing.js"></script>
+		<script src="js/jquery.lavalamp.min.js"></script>
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<script src="js/camera.min.js"></script>
+		<script src="js/hoverIntent.js"></script>
+		<script src="js/jquery.isotope.min.js"></script>
+		<script src="js/jquery.animate-shadow-min.js"></script>
+		<script src="js/bootstrap-datepicker.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/additional-methods.min.js"></script>
+		<script src="js/jquery.colorbox-min.js"></script>
+		<script src="js/jquery.bxslider.min.js"></script>
+		<script src="js/modernizr.custom.97074.js"></script>
+		<script src="js/jquery.hoverdir.js"></script>
+		<script src="js/standard.js"></script>
+
+		<script type="text/javascript">
+			// The twitter accounts that will be included in the ticker
+			var tweetUsers = ['speckyboy'];
+		</script>
+
+		<script src="js/jquery-twitter.js"></script>
+
+		<!-- end scripts -->
+
+	</body>
+
+</html>

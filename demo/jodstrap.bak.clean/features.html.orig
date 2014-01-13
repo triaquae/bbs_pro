@@ -1,0 +1,2194 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Jodstap - features</title>
+
+		<!-- http://twitter.github.com/bootstrap/ -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- http://fontello.com/ -->
+		<link href="css/fontello.css" rel="stylesheet">
+		<!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+
+		<!-- http://kudakurage.com/ligature_symbols/ -->
+		<link href="css/ligature.css" rel="stylesheet">
+
+		<!-- http://www.pixedelic.com/plugins/camera/ -->
+		<link href="css/camera.css" rel="stylesheet">
+
+		<!-- http://isotope.metafizzy.co/ -->
+		<link href="css/isotope.css" rel="stylesheet">
+
+		<!-- https://github.com/eternicode/bootstrap-datepicker -->
+		<link href="css/datepicker.css" rel="stylesheet">
+
+		<!-- http://www.jacklmoore.com/colorbox -->
+		<link href="css/colorbox.css" rel="stylesheet">
+
+		<!-- http://bxslider.com/ -->
+		<link href="css/jquery.bxslider.css" rel="stylesheet" />
+
+		<!-- http://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/ -->
+		<link rel="stylesheet" type="text/css" href="css/hover-style.css" />
+
+		<!-- http://www.google.com/webfonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
+
+		<!-- saltflakes stylesheets -->
+		<link href="css/standard.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	</head>
+
+	<body>
+		<!-- navigation -->
+		<div class="container-fluid sf_nav">
+			<div class="navbar navbar-static-top">
+				<div class="navbar-inner">
+					<div class="container">
+
+						<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+						<!--
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</a>
+						-->
+
+						<!-- Be sure to leave the brand out there if you want it shown -->
+						<a class="brand myBrand" href="index.html"><img src="img/jodstrap-logo.png"></a>
+
+						<!-- Everything you want hidden at 940px or less, place within here -->
+						<!--<div class="nav-collapse">-->
+						<ul class="nav pull-right sf_navmenu navanimation sf-menu hidden-phone" id="sf-menu-responsive">
+							<li id="home" class="Lava selectedLava">
+								<a href="index.html">Home<span><span class="hidden-desktop"> - </span>homepage</span></a>
+							</li>
+							<li id="portfolio" class="Lava open-submenu">
+								<a href="portfolio.html">Portfolio <span><span class="hidden-desktop"> - </span>our products</span></a>
+								<ul class="navsub noLava">
+									<li class="noLava">
+										<a href="portfolio.html">Version 1</a>
+									</li>
+									<li class="noLava">
+										<a href="portfolio2.html">Version 2</a>
+									</li>
+								</ul>
+							</li>
+							<li id="blog" class="Lava">
+								<a href="blog.html" >Blog <span><span class="hidden-desktop"> - </span>our blog</span></a>
+							</li>
+							<li id="features" class="Lava open-submenu">
+								<a href="features.html">Features <span><span class="hidden-desktop"> - </span>colors & buttons</span></a>
+								<ul class="navsub noLava">
+									<li class="noLava">
+										<a href="features.html#sf-typography">Typography</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-icons">Icons</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-form-validation">Form & Validation</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-buttons">Buttons</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-alerts">Alerts</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-tabs">Tabs</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-table">Table</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-tooltips">Tooltips</a>
+									</li>
+									<li class="noLava">
+										<a href="features.html#sf-popover">Popover</a>
+									</li>
+								</ul>
+							</li>
+							<li id="contacts" class="Lava">
+								<a href="contacts.html">Contacts <span><span class="hidden-desktop"> - </span>mail us</span></a>
+							</li>
+						</ul>
+						<!--</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- end navbar -->
+		</div>
+		<!-- end navigation -->
+
+		<div class="container" id="sf-typography">
+			<div class="title2">
+				<h2>Typography</h2>
+				<h3>title and text styling</h3>
+			</div>
+			<hr>
+
+			<div class="row-fluid offset-both">
+				<div class="span4">
+					<div class="iconframe">
+						<i class="sf-icon-lifebuoy"></i>
+					</div>
+					<!--<img class="icon1" src="images/icons/stylistica-icons/48x48/world.png">-->
+					<div class="title1">
+						<h2>Production</h2>
+						<h3>Webdesign and much more</h3>
+					</div>
+					<p>
+						orem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Maecenas tincidunt ornare tellus, a mollis dui venenatis quis. Cras vehicula sodales posuere. Sed eget neque sed erat interdum lacinia.
+					</p>
+				</div>
+				<div class="span4">
+					<div class="iconframe">
+						<i class="sf-icon-twitter-1"></i>
+					</div>
+					<div class="title1">
+						<h2>Production</h2>
+						<h3>Webdesign and much more</h3>
+					</div>
+					<p>
+						orem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Maecenas tincidunt ornare tellus, a mollis dui venenatis quis. Cras vehicula sodales posuere. Sed eget neque sed erat interdum lacinia.
+					</p>
+				</div>
+				<div class="span4">
+					<div class="iconframe">
+						<i class="sf-icon-picasa"></i>
+					</div>
+					<div class="title1">
+						<h2>Production</h2>
+						<h3>Webdesign and much more</h3>
+					</div>
+					<p>
+						orem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Maecenas tincidunt ornare tellus, a mollis dui venenatis quis. Cras vehicula sodales posuere. Sed eget neque sed erat interdum lacinia.
+					</p>
+				</div>
+			</div>
+			<!-- 3 per row II -->
+			<div class="row-fluid offset-both">
+				<div class="span4">
+					<div class="iconframe-small">
+						<i class="sf-icon-camera-3"></i>
+					</div>
+					<div class="title2">
+						<h2>Production</h2>
+						<h3>Webdesign and more</h3>
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet euma, consectetur adipiscing elit zarile. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus ipsum dolor a lobortis erat. Maecenas vel metus ipsum dolor..
+					</p>
+					<a href="#" class="more">Read More <i class="sf-icon-jj-right-open-1"></i></a>
+				</div>
+				<div class="span4">
+					<div class="iconframe-small">
+						<i class="sf-icon-rss-3"></i>
+					</div>
+					<div class="title2">
+						<h2>Production</h2>
+						<h3>Webdesign and more</h3>
+						<p>
+							Lorem ipsum dolor sit amet euma, consectetur adipiscing elit zarile. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus ipsum dolor a lobortis erat. Maecenas vel metus ipsum dolor..
+						</p>
+						<a href="#" class="more">Read More <i class="sf-icon-jj-right-open-1"></i></a>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="iconframe-small">
+						<i class="sf-icon-map"></i>
+					</div>
+					<div class="title2">
+						<h2>Production</h2>
+						<h3>Webdesign and more</h3>
+						<p>
+							Lorem ipsum dolor sit amet euma, consectetur adipiscing elit zarile. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus ipsum dolor a lobortis erat. Maecenas vel metus ipsum dolor..
+						</p>
+						<a href="#" class="more">Read More <i class="sf-icon-jj-right-open-1"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- 4 per row -->
+			<div class="row-fluid offset-both">
+				<div class="span3">
+					<div class="iconframe-small">
+						<i class="sf-icon-map"></i>
+					</div>
+					<div class="title2">
+						<h2>Production</h2>
+						<h3>Webdesign and more</h3>
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet euma, consectetur adipiscing elit zarile. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus ipsum dolor.
+					</p>
+				</div>
+				<div class="span3">
+					<div class="iconframe-small">
+						<i class="sf-icon-map"></i>
+					</div>
+					<div class="title2">
+						<h2>Production</h2>
+						<h3>Webdesign and more</h3>
+						<p>
+							Lorem ipsum dolor sit amet euma, consectetur adipiscing elit zarile. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus ipsum dolor.
+						</p>
+					</div>
+				</div>
+				<div class="span3">
+					<div class="iconframe-small">
+						<i class="sf-icon-map"></i>
+					</div>
+					<div class="title2">
+						<h2>Production</h2>
+						<h3>Webdesign and more</h3>
+						<p>
+							Lorem ipsum dolor sit amet euma, consectetur adipiscing elit zarile. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus ipsum dolor.
+						</p>
+					</div>
+				</div>
+				<div class="span3">
+					<div class="iconframe-small">
+						<i class="sf-icon-map"></i>
+					</div>
+					<div class="title2">
+						<h2>Production</h2>
+						<h3>Webdesign and more</h3>
+						<p>
+							Lorem ipsum dolor sit amet euma, consectetur adipiscing elit zarile. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus ipsum dolor.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- .container sf-typography -->
+
+		<div class="container" id="sf-icons">
+			<div class="title2">
+				<h2>Icons</h2>
+				<h3>Pimp your side with symbols</h3>
+			</div>
+			<hr>
+			<div class="row-fluid">
+				<div class="span3">
+					<ul class="unstyled">
+						<li>
+							<i class="sf-icon-plus-2"></i> sf-icon-plus-2
+						</li>
+						<li>
+							<i class="sf-icon-plus-3"></i> sf-icon-plus-3
+						</li>
+						<li>
+							<i class="sf-icon-minus-2"></i> sf-icon-minus-2
+						</li>
+						<li>
+							<i class="sf-icon-minus-1"></i> sf-icon-minus-1
+						</li>
+						<li>
+							<i class="sf-icon-info-1"></i> sf-icon-info-1
+						</li>
+						<li>
+							<i class="sf-icon-left-2"></i> sf-icon-left-2
+						</li>
+						<li>
+							<i class="sf-icon-left-1"></i> sf-icon-left-1
+						</li>
+						<li>
+							<i class="sf-icon-up-2"></i> sf-icon-up-2
+						</li>
+						<li>
+							<i class="sf-icon-up-3"></i> sf-icon-up-3
+						</li>
+						<li>
+							<i class="sf-icon-right-1"></i> sf-icon-right-1
+						</li>
+						<li>
+							<i class="sf-icon-right-2"></i> sf-icon-right-2
+						</li>
+						<li>
+							<i class="sf-icon-down-2"></i> sf-icon-down-2
+						</li>
+						<li>
+							<i class="sf-icon-down-3"></i> sf-icon-down-3
+						</li>
+						<li>
+							<i class="sf-icon-level-down"></i> sf-icon-level-down
+						</li>
+						<li>
+							<i class="sf-icon-home-3"></i> sf-icon-home-3
+						</li>
+						<li>
+							<i class="sf-icon-home-2"></i> sf-icon-home-2
+						</li>
+						<li>
+							<i class="sf-icon-keyboard"></i> sf-icon-keyboard
+						</li>
+						<li>
+							<i class="sf-icon-pause-1"></i> sf-icon-pause-1
+						</li>
+						<li>
+							<i class="sf-icon-pause-2"></i> sf-icon-pause-2
+						</li>
+						<li>
+							<i class="sf-icon-fast-fw-1"></i> sf-icon-fast-fw-1
+						</li>
+						<li>
+							<i class="sf-icon-fast-fw"></i> sf-icon-fast-fw
+						</li>
+						<li>
+							<i class="sf-icon-fast-bw-1"></i> sf-icon-fast-bw-1
+						</li>
+						<li>
+							<i class="sf-icon-fast-bw"></i> sf-icon-fast-bw
+						</li>
+						<li>
+							<i class="sf-icon-to-end-2"></i> sf-icon-to-end-2
+						</li>
+						<li>
+							<i class="sf-icon-to-end-1"></i> sf-icon-to-end-1
+						</li>
+						<li>
+							<i class="sf-icon-to-start-1"></i> sf-icon-to-start-1
+						</li>
+						<li>
+							<i class="sf-icon-to-start-2"></i> sf-icon-to-start-2
+						</li>
+						<li>
+							<i class="sf-icon-hourglass"></i> sf-icon-hourglass
+						</li>
+						<li>
+							<i class="sf-icon-stop-2"></i> sf-icon-stop-2
+						</li>
+						<li>
+							<i class="sf-icon-stop-3"></i> sf-icon-stop-3
+						</li>
+						<li>
+							<i class="sf-icon-up-dir"></i> sf-icon-up-dir
+						</li>
+						<li>
+							<i class="sf-icon-play-1"></i> sf-icon-play-1
+						</li>
+						<li>
+							<i class="sf-icon-play-2"></i> sf-icon-play-2
+						</li>
+						<li>
+							<i class="sf-icon-right-dir-2"></i> sf-icon-right-dir-2
+						</li>
+						<li>
+							<i class="sf-icon-down-dir-2"></i> sf-icon-down-dir-2
+						</li>
+						<li>
+							<i class="sf-icon-left-dir-1"></i> sf-icon-left-dir-1
+						</li>
+						<li>
+							<i class="sf-icon-cloud-2"></i> sf-icon-cloud-2
+						</li>
+						<li>
+							<i class="sf-icon-star-3"></i> sf-icon-star-3
+						</li>
+						<li>
+							<i class="sf-icon-star-4"></i> sf-icon-star-4
+						</li>
+						<li>
+							<i class="sf-icon-star-empty-1"></i> sf-icon-star-empty-1
+						</li>
+						<li>
+							<i class="sf-icon-star-empty"></i> sf-icon-star-empty
+						</li>
+						<li>
+							<i class="sf-icon-check"></i> sf-icon-check
+						</li>
+						<li>
+							<i class="sf-icon-th-list-2"></i> sf-icon-th-list-2
+						</li>
+						<li>
+							<i class="sf-icon-th-list-3"></i> sf-icon-th-list-3
+						</li>
+						<li>
+							<i class="sf-icon-moon-1"></i> sf-icon-moon-1
+						</li>
+						<li>
+							<i class="sf-icon-heart-empty-2"></i> sf-icon-heart-empty-2
+						</li>
+						<li>
+							<i class="sf-icon-heart-empty-3"></i> sf-icon-heart-empty-3
+						</li>
+						<li>
+							<i class="sf-icon-heart-4"></i> sf-icon-heart-4
+						</li>
+						<li>
+							<i class="sf-icon-heart-3"></i> sf-icon-heart-3
+						</li>
+						<li>
+							<i class="sf-icon-music"></i> sf-icon-music
+						</li>
+						<li>
+							<i class="sf-icon-music-1"></i> sf-icon-music-1
+						</li>
+						<li>
+							<i class="sf-icon-th-2"></i> sf-icon-th-2
+						</li>
+						<li>
+							<i class="sf-icon-th-3"></i> sf-icon-th-3
+						</li>
+						<li>
+							<i class="sf-icon-flag-1"></i> sf-icon-flag-1
+						</li>
+						<li>
+							<i class="sf-icon-flag"></i> sf-icon-flag
+						</li>
+						<li>
+							<i class="sf-icon-cog-3"></i> sf-icon-cog-3
+						</li>
+						<li>
+							<i class="sf-icon-cog-2"></i> sf-icon-cog-2
+						</li>
+						<li>
+							<i class="sf-icon-attention-2"></i> sf-icon-attention-2
+						</li>
+						<li>
+							<i class="sf-icon-attention-3"></i> sf-icon-attention-3
+						</li>
+						<li>
+							<i class="sf-icon-flash-1"></i> sf-icon-flash-1
+						</li>
+						<li>
+							<i class="sf-icon-record"></i> sf-icon-record
+						</li>
+						<li>
+							<i class="sf-icon-cog-alt"></i> sf-icon-cog-alt
+						</li>
+						<li>
+							<i class="sf-icon-flight"></i> sf-icon-flight
+						</li>
+						<li>
+							<i class="sf-icon-flight-1"></i> sf-icon-flight-1
+						</li>
+						<li>
+							<i class="sf-icon-mail-3"></i> sf-icon-mail-3
+						</li>
+						<li>
+							<i class="sf-icon-mail-4"></i> sf-icon-mail-4
+						</li>
+						<li>
+							<i class="sf-icon-edit-1"></i> sf-icon-edit-1
+						</li>
+						<li>
+							<i class="sf-icon-pencil-3"></i> sf-icon-pencil-3
+						</li>
+						<li>
+							<i class="sf-icon-pencil-2"></i> sf-icon-pencil-2
+						</li>
+						<li>
+							<i class="sf-icon-feather"></i> sf-icon-feather
+						</li>
+						<li>
+							<i class="sf-icon-ok-3"></i> sf-icon-ok-3
+						</li>
+						<li>
+							<i class="sf-icon-ok-4"></i> sf-icon-ok-4
+						</li>
+						<li>
+							<i class="sf-icon-ok-circle-2"></i> sf-icon-ok-circle-2
+						</li>
+						<li>
+							<i class="sf-icon-cancel-4"></i> sf-icon-cancel-4
+						</li>
+						<li>
+							<i class="sf-icon-cancel-3"></i> sf-icon-cancel-3
+						</li>
+						<li>
+							<i class="sf-icon-cancel-circle-3"></i> sf-icon-cancel-circle-3
+						</li>
+						<li>
+							<i class="sf-icon-cancel-circle-4"></i> sf-icon-cancel-circle-4
+						</li>
+						<li>
+							<i class="sf-icon-asterisk"></i> sf-icon-asterisk
+						</li>
+						<li>
+							<i class="sf-icon-help-1"></i> sf-icon-help-1
+						</li>
+						<li>
+							<i class="sf-icon-attention-circle"></i> sf-icon-attention-circle
+						</li>
+						<li>
+							<i class="sf-icon-quote-right-1"></i> sf-icon-quote-right-1
+						</li>
+						<li>
+							<i class="sf-icon-plus-circle-2"></i> sf-icon-plus-circle-2
+						</li>
+						<li>
+							<i class="sf-icon-plus-circle-3"></i> sf-icon-plus-circle-3
+						</li>
+						<li>
+							<i class="sf-icon-minus-circle-3"></i> sf-icon-minus-circle-3
+						</li>
+					</ul>
+				</div>
+				<div class="span3">
+					<ul class="unstyled">
+						<li>
+							<i class="sf-icon-minus-circle-2"></i> sf-icon-minus-circle-2
+						</li>
+						<li>
+							<i class="sf-icon-right-thin"></i> sf-icon-right-thin
+						</li>
+						<li>
+							<i class="sf-icon-direction"></i> sf-icon-direction
+						</li>
+						<li>
+							<i class="sf-icon-forward-1"></i> sf-icon-forward-1
+						</li>
+						<li>
+							<i class="sf-icon-forward-2"></i> sf-icon-forward-2
+						</li>
+						<li>
+							<i class="sf-icon-ccw"></i> sf-icon-ccw
+						</li>
+						<li>
+							<i class="sf-icon-cw-3"></i> sf-icon-cw-3
+						</li>
+						<li>
+							<i class="sf-icon-cw-2"></i> sf-icon-cw-2
+						</li>
+						<li>
+							<i class="sf-icon-left-thin"></i> sf-icon-left-thin
+						</li>
+						<li>
+							<i class="sf-icon-up-thin"></i> sf-icon-up-thin
+						</li>
+						<li>
+							<i class="sf-icon-down-thin"></i> sf-icon-down-thin
+						</li>
+						<li>
+							<i class="sf-icon-resize-vertical-1"></i> sf-icon-resize-vertical-1
+						</li>
+						<li>
+							<i class="sf-icon-resize-horizontal-1"></i> sf-icon-resize-horizontal-1
+						</li>
+						<li>
+							<i class="sf-icon-eject-1"></i> sf-icon-eject-1
+						</li>
+						<li>
+							<i class="sf-icon-list-add"></i> sf-icon-list-add
+						</li>
+						<li>
+							<i class="sf-icon-left-bold"></i> sf-icon-left-bold
+						</li>
+						<li>
+							<i class="sf-icon-right-bold"></i> sf-icon-right-bold
+						</li>
+						<li>
+							<i class="sf-icon-up-bold"></i> sf-icon-up-bold
+						</li>
+						<li>
+							<i class="sf-icon-down-bold"></i> sf-icon-down-bold
+						</li>
+						<li>
+							<i class="sf-icon-user-add"></i> sf-icon-user-add
+						</li>
+						<li>
+							<i class="sf-icon-star-half"></i> sf-icon-star-half
+						</li>
+						<li>
+							<i class="sf-icon-ok-circle2"></i> sf-icon-ok-circle2
+						</li>
+						<li>
+							<i class="sf-icon-cancel-circle2"></i> sf-icon-cancel-circle2
+						</li>
+						<li>
+							<i class="sf-icon-help-circle-2"></i> sf-icon-help-circle-2
+						</li>
+						<li>
+							<i class="sf-icon-help-circle-1"></i> sf-icon-help-circle-1
+						</li>
+						<li>
+							<i class="sf-icon-info-circle-1"></i> sf-icon-info-circle-1
+						</li>
+						<li>
+							<i class="sf-icon-info-circle-2"></i> sf-icon-info-circle-2
+						</li>
+						<li>
+							<i class="sf-icon-back"></i> sf-icon-back
+						</li>
+						<li>
+							<i class="sf-icon-back-alt"></i> sf-icon-back-alt
+						</li>
+						<li>
+							<i class="sf-icon-th-large-1"></i> sf-icon-th-large-1
+						</li>
+						<li>
+							<i class="sf-icon-eye-2"></i> sf-icon-eye-2
+						</li>
+						<li>
+							<i class="sf-icon-eye-3"></i> sf-icon-eye-3
+						</li>
+						<li>
+							<i class="sf-icon-eye-off"></i> sf-icon-eye-off
+						</li>
+						<li>
+							<i class="sf-icon-tag-3"></i> sf-icon-tag-3
+						</li>
+						<li>
+							<i class="sf-icon-tag-4"></i> sf-icon-tag-4
+						</li>
+						<li>
+							<i class="sf-icon-tags"></i> sf-icon-tags
+						</li>
+						<li>
+							<i class="sf-icon-camera-alt"></i> sf-icon-camera-alt
+						</li>
+						<li>
+							<i class="sf-icon-upload-cloud-1"></i> sf-icon-upload-cloud-1
+						</li>
+						<li>
+							<i class="sf-icon-reply-1"></i> sf-icon-reply-1
+						</li>
+						<li>
+							<i class="sf-icon-reply-all-1"></i> sf-icon-reply-all-1
+						</li>
+						<li>
+							<i class="sf-icon-code-1"></i> sf-icon-code-1
+						</li>
+						<li>
+							<i class="sf-icon-export-2"></i> sf-icon-export-2
+						</li>
+						<li>
+							<i class="sf-icon-export-1"></i> sf-icon-export-1
+						</li>
+						<li>
+							<i class="sf-icon-print-2"></i> sf-icon-print-2
+						</li>
+						<li>
+							<i class="sf-icon-print-1"></i> sf-icon-print-1
+						</li>
+						<li>
+							<i class="sf-icon-retweet-2"></i> sf-icon-retweet-2
+						</li>
+						<li>
+							<i class="sf-icon-retweet-1"></i> sf-icon-retweet-1
+						</li>
+						<li>
+							<i class="sf-icon-comment-3"></i> sf-icon-comment-3
+						</li>
+						<li>
+							<i class="sf-icon-comment-2"></i> sf-icon-comment-2
+						</li>
+						<li>
+							<i class="sf-icon-chat-3"></i> sf-icon-chat-3
+						</li>
+						<li>
+							<i class="sf-icon-chat-4"></i> sf-icon-chat-4
+						</li>
+						<li>
+							<i class="sf-icon-vcard"></i> sf-icon-vcard
+						</li>
+						<li>
+							<i class="sf-icon-address"></i> sf-icon-address
+						</li>
+						<li>
+							<i class="sf-icon-location-4"></i> sf-icon-location-4
+						</li>
+						<li>
+							<i class="sf-icon-location-3"></i> sf-icon-location-3
+						</li>
+						<li>
+							<i class="sf-icon-map"></i> sf-icon-map
+						</li>
+						<li>
+							<i class="sf-icon-compass-1"></i> sf-icon-compass-1
+						</li>
+						<li>
+							<i class="sf-icon-trash-2"></i> sf-icon-trash-2
+						</li>
+						<li>
+							<i class="sf-icon-trash-3"></i> sf-icon-trash-3
+						</li>
+						<li>
+							<i class="sf-icon-doc-3"></i> sf-icon-doc-3
+						</li>
+						<li>
+							<i class="sf-icon-docs"></i> sf-icon-docs
+						</li>
+						<li>
+							<i class="sf-icon-docs-landscape-1"></i> sf-icon-docs-landscape-1
+						</li>
+						<li>
+							<i class="sf-icon-archive-1"></i> sf-icon-archive-1
+						</li>
+						<li>
+							<i class="sf-icon-rss-3"></i> sf-icon-rss-3
+						</li>
+						<li>
+							<i class="sf-icon-share-1"></i> sf-icon-share-1
+						</li>
+						<li>
+							<i class="sf-icon-basket-2"></i> sf-icon-basket-2
+						</li>
+						<li>
+							<i class="sf-icon-basket-1"></i> sf-icon-basket-1
+						</li>
+						<li>
+							<i class="sf-icon-login"></i> sf-icon-login
+						</li>
+						<li>
+							<i class="sf-icon-logout-1"></i> sf-icon-logout-1
+						</li>
+						<li>
+							<i class="sf-icon-volume"></i> sf-icon-volume
+						</li>
+						<li>
+							<i class="sf-icon-resize-full-4"></i> sf-icon-resize-full-4
+						</li>
+						<li>
+							<i class="sf-icon-resize-full-3"></i> sf-icon-resize-full-3
+						</li>
+						<li>
+							<i class="sf-icon-resize-small-3"></i> sf-icon-resize-small-3
+						</li>
+						<li>
+							<i class="sf-icon-resize-small-2"></i> sf-icon-resize-small-2
+						</li>
+						<li>
+							<i class="sf-icon-popup-3"></i> sf-icon-popup-3
+						</li>
+						<li>
+							<i class="sf-icon-publish"></i> sf-icon-publish
+						</li>
+						<li>
+							<i class="sf-icon-window"></i> sf-icon-window
+						</li>
+						<li>
+							<i class="sf-icon-arrow-combo"></i> sf-icon-arrow-combo
+						</li>
+						<li>
+							<i class="sf-icon-zoom-in-1"></i> sf-icon-zoom-in-1
+						</li>
+						<li>
+							<i class="sf-icon-zoom-out-1"></i> sf-icon-zoom-out-1
+						</li>
+						<li>
+							<i class="sf-icon-down-circle2-1"></i> sf-icon-down-circle2-1
+						</li>
+						<li>
+							<i class="sf-icon-down-circle2"></i> sf-icon-down-circle2
+						</li>
+						<li>
+							<i class="sf-icon-left-circle2"></i> sf-icon-left-circle2
+						</li>
+						<li>
+							<i class="sf-icon-right-circle2"></i> sf-icon-right-circle2
+						</li>
+					</ul>
+				</div>
+				<div class="span3">
+					<ul class="unstyled">
+						<li>
+							<i class="sf-icon-up-circle2-1"></i> sf-icon-up-circle2-1
+						</li>
+						<li>
+							<i class="sf-icon-up-circle2"></i> sf-icon-up-circle2
+						</li>
+						<li>
+							<i class="sf-icon-down-open"></i> sf-icon-down-open
+						</li>
+						<li>
+							<i class="sf-icon-down-open-1"></i> sf-icon-down-open-1
+						</li>
+						<li>
+							<i class="sf-icon-left-open-1"></i> sf-icon-left-open-1
+						</li>
+						<li>
+							<i class="sf-icon-left-open-2"></i> sf-icon-left-open-2
+						</li>
+						<li>
+							<i class="sf-icon-right-open-1"></i> sf-icon-right-open-1
+						</li>
+						<li>
+							<i class="sf-icon-right-open-2"></i> sf-icon-right-open-2
+						</li>
+						<li>
+							<i class="sf-icon-up-open"></i> sf-icon-up-open
+						</li>
+						<li>
+							<i class="sf-icon-up-open-1"></i> sf-icon-up-open-1
+						</li>
+						<li>
+							<i class="sf-icon-arrows-cw-1"></i> sf-icon-arrows-cw-1
+						</li>
+						<li>
+							<i class="sf-icon-play-circle2-1"></i> sf-icon-play-circle2-1
+						</li>
+						<li>
+							<i class="sf-icon-to-end-alt"></i> sf-icon-to-end-alt
+						</li>
+						<li>
+							<i class="sf-icon-to-start-alt"></i> sf-icon-to-start-alt
+						</li>
+						<li>
+							<i class="sf-icon-progress-0"></i> sf-icon-progress-0
+						</li>
+						<li>
+							<i class="sf-icon-progress-1"></i> sf-icon-progress-1
+						</li>
+						<li>
+							<i class="sf-icon-progress-2"></i> sf-icon-progress-2
+						</li>
+						<li>
+							<i class="sf-icon-progress-3"></i> sf-icon-progress-3
+						</li>
+						<li>
+							<i class="sf-icon-signal-3"></i> sf-icon-signal-3
+						</li>
+						<li>
+							<i class="sf-icon-back-in-time"></i> sf-icon-back-in-time
+						</li>
+						<li>
+							<i class="sf-icon-net"></i> sf-icon-net
+						</li>
+						<li>
+							<i class="sf-icon-inbox-1"></i> sf-icon-inbox-1
+						</li>
+						<li>
+							<i class="sf-icon-inbox"></i> sf-icon-inbox
+						</li>
+						<li>
+							<i class="sf-icon-install"></i> sf-icon-install
+						</li>
+						<li>
+							<i class="sf-icon-font-1"></i> sf-icon-font-1
+						</li>
+						<li>
+							<i class="sf-icon-bold"></i> sf-icon-bold
+						</li>
+						<li>
+							<i class="sf-icon-italic"></i> sf-icon-italic
+						</li>
+						<li>
+							<i class="sf-icon-text-height"></i> sf-icon-text-height
+						</li>
+						<li>
+							<i class="sf-icon-text-width"></i> sf-icon-text-width
+						</li>
+						<li>
+							<i class="sf-icon-align-left"></i> sf-icon-align-left
+						</li>
+						<li>
+							<i class="sf-icon-align-center"></i> sf-icon-align-center
+						</li>
+						<li>
+							<i class="sf-icon-align-right"></i> sf-icon-align-right
+						</li>
+						<li>
+							<i class="sf-icon-align-justify"></i> sf-icon-align-justify
+						</li>
+						<li>
+							<i class="sf-icon-list-2"></i> sf-icon-list-2
+						</li>
+						<li>
+							<i class="sf-icon-indent-left-1"></i> sf-icon-indent-left-1
+						</li>
+						<li>
+							<i class="sf-icon-indent-right-1"></i> sf-icon-indent-right-1
+						</li>
+						<li>
+							<i class="sf-icon-lifebuoy"></i> sf-icon-lifebuoy
+						</li>
+						<li>
+							<i class="sf-icon-mouse"></i> sf-icon-mouse
+						</li>
+						<li>
+							<i class="sf-icon-bag"></i> sf-icon-bag
+						</li>
+						<li>
+							<i class="sf-icon-dot"></i> sf-icon-dot
+						</li>
+						<li>
+							<i class="sf-icon-dot-2"></i> sf-icon-dot-2
+						</li>
+						<li>
+							<i class="sf-icon-dot-3"></i> sf-icon-dot-3
+						</li>
+						<li>
+							<i class="sf-icon-off"></i> sf-icon-off
+						</li>
+						<li>
+							<i class="sf-icon-road"></i> sf-icon-road
+						</li>
+						<li>
+							<i class="sf-icon-list-alt"></i> sf-icon-list-alt
+						</li>
+						<li>
+							<i class="sf-icon-qrcode"></i> sf-icon-qrcode
+						</li>
+						<li>
+							<i class="sf-icon-barcode"></i> sf-icon-barcode
+						</li>
+						<li>
+							<i class="sf-icon-ajust"></i> sf-icon-ajust
+						</li>
+						<li>
+							<i class="sf-icon-tint"></i> sf-icon-tint
+						</li>
+						<li>
+							<i class="sf-icon-magnet"></i> sf-icon-magnet
+						</li>
+						<li>
+							<i class="sf-icon-cc"></i> sf-icon-cc
+						</li>
+						<li>
+							<i class="sf-icon-move-1"></i> sf-icon-move-1
+						</li>
+						<li>
+							<i class="sf-icon-facebook-1"></i> sf-icon-facebook-1
+						</li>
+						<li>
+							<i class="sf-icon-github-1"></i> sf-icon-github-1
+						</li>
+						<li>
+							<i class="sf-icon-facebook-rect-1"></i> sf-icon-facebook-rect-1
+						</li>
+						<li>
+							<i class="sf-icon-twitter-1"></i> sf-icon-twitter-1
+						</li>
+						<li>
+							<i class="sf-icon-twitter-bird-1"></i> sf-icon-twitter-bird-1
+						</li>
+						<li>
+							<i class="sf-icon-icq"></i> sf-icon-icq
+						</li>
+						<li>
+							<i class="sf-icon-twitter"></i> sf-icon-twitter
+						</li>
+						<li>
+							<i class="sf-icon-yandex"></i> sf-icon-yandex
+						</li>
+						<li>
+							<i class="sf-icon-yandex-rect"></i> sf-icon-yandex-rect
+						</li>
+						<li>
+							<i class="sf-icon-github-text"></i> sf-icon-github-text
+						</li>
+						<li>
+							<i class="sf-icon-facebook"></i> sf-icon-facebook
+						</li>
+						<li>
+							<i class="sf-icon-github"></i> sf-icon-github
+						</li>
+						<li>
+							<i class="sf-icon-googleplus-rect"></i> sf-icon-googleplus-rect
+						</li>
+						<li>
+							<i class="sf-icon-vkontakte-rect"></i> sf-icon-vkontakte-rect
+						</li>
+						<li>
+							<i class="sf-icon-skype"></i> sf-icon-skype
+						</li>
+						<li>
+							<i class="sf-icon-linkedin-1"></i> sf-icon-linkedin-1
+						</li>
+						<li>
+							<i class="sf-icon-odnoklassniki"></i> sf-icon-odnoklassniki
+						</li>
+						<li>
+							<i class="sf-icon-odnoklassniki-rect"></i> sf-icon-odnoklassniki-rect
+						</li>
+						<li>
+							<i class="sf-icon-vimeo-rect"></i> sf-icon-vimeo-rect
+						</li>
+						<li>
+							<i class="sf-icon-vimeo"></i> sf-icon-vimeo
+						</li>
+						<li>
+							<i class="sf-icon-tumblr-rect"></i> sf-icon-tumblr-rect
+						</li>
+						<li>
+							<i class="sf-icon-google-circles"></i> sf-icon-google-circles
+						</li>
+						<li>
+							<i class="sf-icon-tumblr"></i> sf-icon-tumblr
+						</li>
+						<li>
+							<i class="sf-icon-friendfeed"></i> sf-icon-friendfeed
+						</li>
+						<li>
+							<i class="sf-icon-friendfeed-rect"></i> sf-icon-friendfeed-rect
+						</li>
+						<li>
+							<i class="sf-icon-blogger"></i> sf-icon-blogger
+						</li>
+						<li>
+							<i class="sf-icon-blogger-rect"></i> sf-icon-blogger-rect
+						</li>
+						<li>
+							<i class="sf-icon-deviantart"></i> sf-icon-deviantart
+						</li>
+						<li>
+							<i class="sf-icon-jabber"></i> sf-icon-jabber
+						</li>
+						<li>
+							<i class="sf-icon-lastfm"></i> sf-icon-lastfm
+						</li>
+						<li>
+							<i class="sf-icon-lastfm-rect"></i> sf-icon-lastfm-rect
+						</li>
+						<li>
+							<i class="sf-icon-linkedin"></i> sf-icon-linkedin
+						</li>
+					</ul>
+				</div>
+				<div class="span3">
+					<ul class="unstyled">
+						<li>
+							<i class="sf-icon-linkedin-rect"></i> sf-icon-linkedin-rect
+						</li>
+						<li>
+							<i class="sf-icon-picasa"></i> sf-icon-picasa
+						</li>
+						<li>
+							<i class="sf-icon-wordpress"></i> sf-icon-wordpress
+						</li>
+						<li>
+							<i class="sf-icon-logo-entypo"></i> sf-icon-logo-entypo
+						</li>
+						<li>
+							<i class="sf-icon-flag-sw"></i> sf-icon-flag-sw
+						</li>
+						<li>
+							<i class="sf-icon-logo-db"></i> sf-icon-logo-db
+						</li>
+						<li>
+							<i class="sf-icon-globe-1"></i> sf-icon-globe-1
+						</li>
+						<li>
+							<i class="sf-icon-picture-3"></i> sf-icon-picture-3
+						</li>
+						<li>
+							<i class="sf-icon-picture-2"></i> sf-icon-picture-2
+						</li>
+						<li>
+							<i class="sf-icon-leaf"></i> sf-icon-leaf
+						</li>
+						<li>
+							<i class="sf-icon-leaf-1"></i> sf-icon-leaf-1
+						</li>
+						<li>
+							<i class="sf-icon-lemon"></i> sf-icon-lemon
+						</li>
+						<li>
+							<i class="sf-icon-glass"></i> sf-icon-glass
+						</li>
+						<li>
+							<i class="sf-icon-gift"></i> sf-icon-gift
+						</li>
+						<li>
+							<i class="sf-icon-mic-1"></i> sf-icon-mic-1
+						</li>
+						<li>
+							<i class="sf-icon-videocam-1"></i> sf-icon-videocam-1
+						</li>
+						<li>
+							<i class="sf-icon-headphones-1"></i> sf-icon-headphones-1
+						</li>
+						<li>
+							<i class="sf-icon-palette"></i> sf-icon-palette
+						</li>
+						<li>
+							<i class="sf-icon-video-4"></i> sf-icon-video-4
+						</li>
+						<li>
+							<i class="sf-icon-video-3"></i> sf-icon-video-3
+						</li>
+						<li>
+							<i class="sf-icon-target-3"></i> sf-icon-target-3
+						</li>
+						<li>
+							<i class="sf-icon-target-2"></i> sf-icon-target-2
+						</li>
+						<li>
+							<i class="sf-icon-music-alt"></i> sf-icon-music-alt
+						</li>
+						<li>
+							<i class="sf-icon-top-list"></i> sf-icon-top-list
+						</li>
+						<li>
+							<i class="sf-icon-award-2"></i> sf-icon-award-2
+						</li>
+						<li>
+							<i class="sf-icon-thumbs-up-1"></i> sf-icon-thumbs-up-1
+						</li>
+						<li>
+							<i class="sf-icon-thumbs-up-2"></i> sf-icon-thumbs-up-2
+						</li>
+						<li>
+							<i class="sf-icon-thumbs-down-1"></i> sf-icon-thumbs-down-1
+						</li>
+						<li>
+							<i class="sf-icon-user-4"></i> sf-icon-user-4
+						</li>
+						<li>
+							<i class="sf-icon-user-3"></i> sf-icon-user-3
+						</li>
+						<li>
+							<i class="sf-icon-users"></i> sf-icon-users
+						</li>
+						<li>
+							<i class="sf-icon-lamp-1"></i> sf-icon-lamp-1
+						</li>
+						<li>
+							<i class="sf-icon-monitor"></i> sf-icon-monitor
+						</li>
+						<li>
+							<i class="sf-icon-cd-2"></i> sf-icon-cd-2
+						</li>
+						<li>
+							<i class="sf-icon-folder-3"></i> sf-icon-folder-3
+						</li>
+						<li>
+							<i class="sf-icon-folder-2"></i> sf-icon-folder-2
+						</li>
+						<li>
+							<i class="sf-icon-folder-open"></i> sf-icon-folder-open
+						</li>
+						<li>
+							<i class="sf-icon-doc-text"></i> sf-icon-doc-text
+						</li>
+						<li>
+							<i class="sf-icon-doc-4"></i> sf-icon-doc-4
+						</li>
+						<li>
+							<i class="sf-icon-calendar-3"></i> sf-icon-calendar-3
+						</li>
+						<li>
+							<i class="sf-icon-calendar-2"></i> sf-icon-calendar-2
+						</li>
+						<li>
+							<i class="sf-icon-chart-bar-2"></i> sf-icon-chart-bar-2
+						</li>
+						<li>
+							<i class="sf-icon-pin-1"></i> sf-icon-pin-1
+						</li>
+						<li>
+							<i class="sf-icon-attach-2"></i> sf-icon-attach-2
+						</li>
+						<li>
+							<i class="sf-icon-book-2"></i> sf-icon-book-2
+						</li>
+						<li>
+							<i class="sf-icon-book-open-1"></i> sf-icon-book-open-1
+						</li>
+						<li>
+							<i class="sf-icon-phone"></i> sf-icon-phone
+						</li>
+						<li>
+							<i class="sf-icon-upload-1"></i> sf-icon-upload-1
+						</li>
+						<li>
+							<i class="sf-icon-upload-2"></i> sf-icon-upload-2
+						</li>
+						<li>
+							<i class="sf-icon-download-3"></i> sf-icon-download-3
+						</li>
+						<li>
+							<i class="sf-icon-download-2"></i> sf-icon-download-2
+						</li>
+						<li>
+							<i class="sf-icon-mobile-2"></i> sf-icon-mobile-2
+						</li>
+						<li>
+							<i class="sf-icon-signal-4"></i> sf-icon-signal-4
+						</li>
+						<li>
+							<i class="sf-icon-camera-2"></i> sf-icon-camera-2
+						</li>
+						<li>
+							<i class="sf-icon-camera-3"></i> sf-icon-camera-3
+						</li>
+						<li>
+							<i class="sf-icon-shuffle"></i> sf-icon-shuffle
+						</li>
+						<li>
+							<i class="sf-icon-shuffle-1"></i> sf-icon-shuffle-1
+						</li>
+						<li>
+							<i class="sf-icon-light-down"></i> sf-icon-light-down
+						</li>
+						<li>
+							<i class="sf-icon-light-up"></i> sf-icon-light-up
+						</li>
+						<li>
+							<i class="sf-icon-volume-off-2"></i> sf-icon-volume-off-2
+						</li>
+						<li>
+							<i class="sf-icon-volume-off-3"></i> sf-icon-volume-off-3
+						</li>
+						<li>
+							<i class="sf-icon-volume-down-1"></i> sf-icon-volume-down-1
+						</li>
+						<li>
+							<i class="sf-icon-volume-up-2"></i> sf-icon-volume-up-2
+						</li>
+						<li>
+							<i class="sf-icon-volume-up-3"></i> sf-icon-volume-up-3
+						</li>
+						<li>
+							<i class="sf-icon-battery"></i> sf-icon-battery
+						</li>
+						<li>
+							<i class="sf-icon-search-3"></i> sf-icon-search-3
+						</li>
+						<li>
+							<i class="sf-icon-search-4"></i> sf-icon-search-4
+						</li>
+						<li>
+							<i class="sf-icon-search-alt"></i> sf-icon-search-alt
+						</li>
+						<li>
+							<i class="sf-icon-key-1"></i> sf-icon-key-1
+						</li>
+						<li>
+							<i class="sf-icon-lock-4"></i> sf-icon-lock-4
+						</li>
+						<li>
+							<i class="sf-icon-lock-3"></i> sf-icon-lock-3
+						</li>
+						<li>
+							<i class="sf-icon-lock-open-3"></i> sf-icon-lock-open-3
+						</li>
+						<li>
+							<i class="sf-icon-bell-1"></i> sf-icon-bell-1
+						</li>
+						<li>
+							<i class="sf-icon-bookmark"></i> sf-icon-bookmark
+						</li>
+						<li>
+							<i class="sf-icon-bookmark-1"></i> sf-icon-bookmark-1
+						</li>
+						<li>
+							<i class="sf-icon-link-2"></i> sf-icon-link-2
+						</li>
+						<li>
+							<i class="sf-icon-link-3"></i> sf-icon-link-3
+						</li>
+						<li>
+							<i class="sf-icon-fire"></i> sf-icon-fire
+						</li>
+						<li>
+							<i class="sf-icon-clock-3"></i> sf-icon-clock-3
+						</li>
+						<li>
+							<i class="sf-icon-clock-4"></i> sf-icon-clock-4
+						</li>
+						<li>
+							<i class="sf-icon-block-3"></i> sf-icon-block-3
+						</li>
+						<li>
+							<i class="sf-icon-block-2"></i> sf-icon-block-2
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- .container sf-icons -->
+
+		<div class="container" id="sf-form-validation">
+			<div class="title2">
+				<h2>From & Validation</h2>
+				<h3>Let's communicate with people</h3>
+			</div>
+			<hr>
+			<div class="row-fluid">
+				<form id="sf-form" action='' method="POST">
+					<div class="row no-margin">
+						<div class="span4">
+							<input type="text" id="name" name="name" placeholder="Name" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Name">
+							<textarea rows="5" id="address" name="address" placeholder="Address" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Address"></textarea>
+							<select class="span12 sf-tooltip" id="country" placeholder="Country" rel="tooltip" data-placement="top" data-title="Country">
+								<option>Australia</option>
+								<option>France</option>
+								<option>Germany</option>
+								<option>South Africa</option>
+								<option>United Kingdom</option>
+								<option>United States</option>
+							</select>
+						</div>
+						<div class="span4">
+							<select class="span12 sf-tooltip" id="inputGender" placeholder="Gender" rel="tooltip" data-placement="top" data-title="Gender">
+								<option>male</option>
+								<option>female</option>
+							</select>
+							<input type="text" id="birthday" name="birthday" placeholder="Birthday" class="span12 required sf-tooltip datepicker" rel="tooltip" data-placement="top" data-title="Birthday">
+							<input type="text" id="email" name="email" placeholder="email" class="span12 required email sf-tooltip" rel="tooltip" data-placement="top" data-title="email">
+							<input type="text" id="username" name="username" placeholder="User name" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="User name">
+							<input type="password" id="password" name="password" placeholder="Password" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Password">
+						</div>
+						<div class="span4">
+							<textarea rows="9" id="message" name="message" placeholder="Message..." class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Message..."></textarea>
+						</div>
+					</div>
+					<button class="btn">
+						Send
+					</button>
+					<button class="btn btn-link" type="reset">
+						Reset
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- .container sf-form-validation -->
+
+		<div class="container" id="sf-buttons">
+			<div class="title2">
+				<h2>Buttons</h2>
+				<h3>Wide range of button styles and colors</h3>
+			</div>
+			<hr>
+			<div class="row-fluid">
+				<!-- buttons large -->
+				<div class="row-fluid">
+					<button class="btn btn-large" type="button">
+						Default
+					</button>
+					<button class="btn btn-primary btn-large" type="button">
+						Primary
+					</button>
+					<button class="btn btn-info btn-large" type="button">
+						Info
+					</button>
+					<button class="btn btn-success btn-large" type="button">
+						Success
+					</button>
+					<button class="btn btn-warning btn-large" type="button">
+						Warning
+					</button>
+					<button class="btn btn-danger btn-large" type="button">
+						Danger
+					</button>
+					<button class="btn btn-inverse btn-large" type="button">
+						Inverse
+					</button>
+					<button class="btn btn-link btn-large" type="button">
+						Link
+					</button>
+				</div>
+
+				<div class="row-fluid offset-top">
+					<!-- buttons standard -->
+					<button class="btn" type="button">
+						Default
+					</button>
+					<button class="btn btn-primary" type="button">
+						Primary
+					</button>
+					<button class="btn btn-info" type="button">
+						Info
+					</button>
+					<button class="btn btn-success" type="button">
+						Success
+					</button>
+					<button class="btn btn-warning" type="button">
+						Warning
+					</button>
+					<button class="btn btn-danger" type="button">
+						Danger
+					</button>
+					<button class="btn btn-inverse" type="button">
+						Inverse
+					</button>
+					<button class="btn btn-link" type="button">
+						Link
+					</button>
+				</div>
+
+				<div class="row-fluid offset-top">
+					<!-- buttons small -->
+					<button class="btn btn-small" type="button">
+						Default
+					</button>
+					<button class="btn btn-primary btn-small" type="button">
+						Primary
+					</button>
+					<button class="btn btn-info btn-small" type="button">
+						Info
+					</button>
+					<button class="btn btn-success btn-small" type="button">
+						Success
+					</button>
+					<button class="btn btn-warning btn-small" type="button">
+						Warning
+					</button>
+					<button class="btn btn-danger btn-small" type="button">
+						Danger
+					</button>
+					<button class="btn btn-inverse btn-small" type="button">
+						Inverse
+					</button>
+					<button class="btn btn-link btn-small" type="button">
+						Link
+					</button>
+				</div>
+
+				<div class="row-fluid offset-top">
+					<!-- buttons mini -->
+					<button class="btn btn-mini" type="button">
+						Default
+					</button>
+					<button class="btn btn-primary btn-mini" type="button">
+						Primary
+					</button>
+					<button class="btn btn-info btn-mini" type="button">
+						Info
+					</button>
+					<button class="btn btn-success btn-mini" type="button">
+						Success
+					</button>
+					<button class="btn btn-warning btn-mini" type="button">
+						Warning
+					</button>
+					<button class="btn btn-danger btn-mini" type="button">
+						Danger
+					</button>
+					<button class="btn btn-inverse btn-mini" type="button">
+						Inverse
+					</button>
+					<button class="btn btn-link btn-mini" type="button">
+						Link
+					</button>
+				</div>
+
+				<div class="row-fluid offset-top">
+					<!-- buttons group -->
+					<div class="btn-group ">
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+					</div>
+				</div>
+
+				<div class="row-fluid offset-top">
+					<!-- buttons group with different button typs / colors -->
+					<div class="btn-group">
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn btn-primary">
+							Primary
+						</button>
+						<button class="btn btn-info">
+							Info
+						</button>
+						<button class="btn btn-success">
+							Success
+						</button>
+						<button class="btn btn-warning">
+							Warning
+						</button>
+						<button class="btn btn-danger">
+							Danger
+						</button>
+						<button class="btn btn-inverse">
+							Inverse
+						</button>
+					</div>
+				</div>
+
+				<div class="row-fluid offset-top">
+					<!-- buttons group vertical -->
+					<div class="btn-group btn-group-vertical">
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn">
+							Default
+						</button>
+					</div>
+
+					<div class="btn-group btn-group-vertical">
+						<!-- buttons group vertical with different button typs / colors -->
+						<button class="btn">
+							Default
+						</button>
+						<button class="btn btn-primary">
+							Primary
+						</button>
+						<button class="btn btn-info">
+							Info
+						</button>
+						<button class="btn btn-success">
+							Success
+						</button>
+						<button class="btn btn-warning">
+							Warning
+						</button>
+						<button class="btn btn-danger">
+							Danger
+						</button>
+						<button class="btn btn-inverse">
+							Inverse
+						</button>
+					</div>
+				</div>
+
+				<div class="row-fluid offset-top">
+					<!-- buttons with dropdowns -->
+					<div class="btn-group">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> Default <span class="caret"></span> </a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">Link 1</a>
+							</li>
+							<li>
+								<a href="#">Link 2</a>
+							</li>
+							<li>
+								<a href="#">Link 3</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">Link 4</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="btn-group">
+						<a class="btn dropdown-toggle btn-primary" data-toggle="dropdown" href="#"> Primary <span class="caret"></span> </a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">Link 1</a>
+							</li>
+							<li>
+								<a href="#">Link 2</a>
+							</li>
+							<li>
+								<a href="#">Link 3</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">Link 4</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="btn-group">
+						<a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#"> Default <span class="caret"></span> </a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">Link 1</a>
+							</li>
+							<li>
+								<a href="#">Link 2</a>
+							</li>
+							<li>
+								<a href="#">Link 3</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">Link 4</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="btn-group">
+						<a class="btn dropdown-toggle btn-success" data-toggle="dropdown" href="#"> Default <span class="caret"></span> </a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">Link 1</a>
+							</li>
+							<li>
+								<a href="#">Link 2</a>
+							</li>
+							<li>
+								<a href="#">Link 3</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">Link 4</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="btn-group">
+						<a class="btn dropdown-toggle btn-warning" data-toggle="dropdown" href="#"> Default <span class="caret"></span> </a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">Link 1</a>
+							</li>
+							<li>
+								<a href="#">Link 2</a>
+							</li>
+							<li>
+								<a href="#">Link 3</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">Link 4</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="btn-group">
+						<a class="btn dropdown-toggle btn-danger" data-toggle="dropdown" href="#"> Default <span class="caret"></span> </a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">Link 1</a>
+							</li>
+							<li>
+								<a href="#">Link 2</a>
+							</li>
+							<li>
+								<a href="#">Link 3</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">Link 4</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="btn-group">
+						<a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="#"> Default <span class="caret"></span> </a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">Link 1</a>
+							</li>
+							<li>
+								<a href="#">Link 2</a>
+							</li>
+							<li>
+								<a href="#">Link 3</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">Link 4</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row-fluid offset-top">
+					<!-- buttons splitted with dropdowns -->
+					<div class="btn-group">
+						<div class="btn-group">
+							<button class="btn">
+								Default
+							</button>
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span> </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Link 1</a>
+								</li>
+								<li>
+									<a href="#">Link 2</a>
+								</li>
+								<li>
+									<a href="#">Link 3</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Link 4</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group">
+							<button class="btn btn-primary">
+								Primary
+							</button>
+							<a class="btn dropdown-toggle btn-primary" data-toggle="dropdown" href="#"><span class="caret"></span> </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Link 1</a>
+								</li>
+								<li>
+									<a href="#">Link 2</a>
+								</li>
+								<li>
+									<a href="#">Link 3</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Link 4</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group">
+							<button class="btn btn-info">
+								Info
+							</button>
+							<a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#"><span class="caret"></span> </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Link 1</a>
+								</li>
+								<li>
+									<a href="#">Link 2</a>
+								</li>
+								<li>
+									<a href="#">Link 3</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Link 4</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group">
+							<button class="btn btn-success">
+								Success
+							</button>
+							<a class="btn dropdown-toggle btn-success" data-toggle="dropdown" href="#"><span class="caret"></span> </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Link 1</a>
+								</li>
+								<li>
+									<a href="#">Link 2</a>
+								</li>
+								<li>
+									<a href="#">Link 3</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Link 4</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group">
+							<button class="btn btn-warning">
+								Warning
+							</button>
+							<a class="btn dropdown-toggle btn-warning" data-toggle="dropdown" href="#"><span class="caret"></span> </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Link 1</a>
+								</li>
+								<li>
+									<a href="#">Link 2</a>
+								</li>
+								<li>
+									<a href="#">Link 3</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Link 4</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group">
+							<button class="btn btn-danger">
+								Danger
+							</button>
+							<a class="btn dropdown-toggle btn-danger" data-toggle="dropdown" href="#"><span class="caret"></span> </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Link 1</a>
+								</li>
+								<li>
+									<a href="#">Link 2</a>
+								</li>
+								<li>
+									<a href="#">Link 3</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Link 4</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group">
+							<button class="btn btn-inverse">
+								Inverse
+							</button>
+							<a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="#"><span class="caret"></span> </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Link 1</a>
+								</li>
+								<li>
+									<a href="#">Link 2</a>
+								</li>
+								<li>
+									<a href="#">Link 3</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Link 4</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- .container sf-buttons -->
+
+		<div class="container" id="sf-alerts">
+			<div class="row-fluid">
+				<div class="title2">
+					<h2>Alerts</h2>
+					<h3>Give colorful hints</h3>
+				</div>
+				<hr>
+				<div class="alert">
+					<button type="button" class="close" data-dismiss="alert">
+						x
+					</button>
+					<strong>Warning!</strong> Best check yo self, you're not looking too good.
+				</div>
+				<div class="alert alert-error">
+					<button type="button" class="close" data-dismiss="alert">
+						x
+					</button>
+					<strong>Oh snap!</strong> Change a few things up and try submitting again.
+				</div>
+				<div class="alert alert-success">
+					<button type="button" class="close" data-dismiss="alert">
+						x
+					</button>
+					<strong>Well done!</strong> You successfully read this important alert message.
+				</div>
+				<div class="alert alert-info">
+					<button type="button" class="close" data-dismiss="alert">
+						x
+					</button>
+					<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+				</div>
+			</div>
+		</div>
+		<!-- .container sf-alerts -->
+
+		<div class="container" id="sf-tabs">
+			<div class="row-fluid">
+				<div class="title2">
+					<h2>Tabs</h2>
+					<h3>Jump between boxes</h3>
+				</div>
+				<hr>
+				<ul class="nav nav-tabs" id="sf-tab">
+					<li>
+						<a href="#tab1">Tab 1</a>
+					</li>
+					<li>
+						<a href="#tab2">Tab 2</a>
+					</li>
+					<li>
+						<a href="#tab3">Tab 3</a>
+					</li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane" id="tab1">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
+						</p>
+					</div>
+					<div class="tab-pane" id="tab2">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
+						</p>
+					</div>
+					<div class="tab-pane" id="tab3">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- .container sf-tabs -->
+
+		<div class="container" id="sf-table">
+			<div class="row-fluid">
+				<div class="title2">
+					<h2>Table</h2>
+					<h3>The easiness of grids</h3>
+				</div>
+				<hr>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Username</th>
+							<th style="width: 36px;"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Mark</td>
+							<td>Tompson</td>
+							<td>the_mark7</td>
+							<td><a href="#"><i class="icon-pencil"></i></a><a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Ashley</td>
+							<td>Jacobs</td>
+							<td>ash11927</td>
+							<td><a href="#"><i class="icon-pencil"></i></a><a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Audrey</td>
+							<td>Ann</td>
+							<td>audann84</td>
+							<td><a href="#"><i class="icon-pencil"></i></a><a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>John</td>
+							<td>Robinson</td>
+							<td>jr5527</td>
+							<td><a href="#"><i class="icon-pencil"></i></a><a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Aaron</td>
+							<td>Butler</td>
+							<td>aaron_butler</td>
+							<td><a href="#"><i class="icon-pencil"></i></a><a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>Chris</td>
+							<td>Albert</td>
+							<td>cab79</td>
+							<td><a href="#"><i class="icon-pencil"></i></a><a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="pagination">
+					<ul>
+						<li>
+							<a href="#">Prev</a>
+						</li>
+						<li>
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+						<li>
+							<a href="#">Next</a>
+						</li>
+					</ul>
+				</div>
+				<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							x
+						</button>
+						<h3 id="myModalLabel">Delete Confirmation</h3>
+					</div>
+					<div class="modal-body">
+						<p class="error-text">
+							Are you sure you want to delete the user?
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">
+							Cancel
+						</button>
+						<button class="btn btn-danger" data-dismiss="modal">
+							Delete
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- .container table -->
+
+		<div class="container">
+			<div class="row-fluid">
+				<div class="title2">
+					<h2>Tooltips</h2>
+					<h3>For further details</h3>
+				</div>
+				<hr>
+				<ul class="sf-inline-list">
+					<li>
+						<a href="#" class="sf-tooltip" rel="tooltip" data-placement="top" data-title="Tooltip on top">Tooltip on top</a>
+					</li>
+					<li>
+						<a href="#" class="sf-tooltip" rel="tooltip" data-placement="right" data-title="Tooltip on right">Tooltip on right</a>
+					</li>
+					<li>
+						<a href="#" class="sf-tooltip" rel="tooltip" data-placement="bottom" data-title="Tooltip on bottom">Tooltip on bottom</a>
+					</li>
+					<li>
+						<a href="#" class="sf-tooltip" rel="tooltip" data-placement="left" data-title="Tooltip on left">Tooltip on left</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- .container sf-tooltips -->
+
+		<div class="container" id="sf-popover">
+			<div class="row-fluid">
+				<div class="title2">
+					<h2>Popover</h2>
+					<h3>And some more further details</h3>
+				</div>
+				<hr>
+				<ul class="sf-inline-list">
+					<li>
+						<a class="btn sf-popover" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top">Popover on top</a>
+					</li>
+					<li>
+						<a class="btn sf-popover" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on right">Popover on right</a>
+					</li>
+					<li>
+						<a class="btn sf-popover" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on bottom">Popover on bottom</a>
+					</li>
+					<li>
+						<a class="btn sf-popover" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on left">Popover on left</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- .container sf-popover -->
+
+		<!-- footer -->
+		<div class="container_fluid sf_footer">
+			<div class="container">
+				<div class="row-fluid">
+					<div class="span4">
+						<h4>Recent Posts</h4>
+						<a href="#">Macbook Pro for $1</a>
+						<hr>
+						<a href="#">Awesome iPad givaway</a>
+						<hr>
+						<a href="#">Sneak preview of iOS 7</a>
+						<hr>
+						<a href="#">Awesome portfolio web design</a>
+					</div>
+					<div class="span4">
+						<h4>Recent Tweets</h4>
+
+						<ul class="unstyled" id="twitter-ticker">
+
+							<div id="tweet-container">
+								Loading..
+							</div>
+
+						</ul>
+
+					</div>
+					<div class="span4">
+						<h4>Newsletter</h4>
+						<p>
+							Subscribe to our newsletter to receive emails about new blog posts.
+						</p>
+						<form id="newsletter" action='' method="POST">
+							<div class="row no-margin">
+								<div class="span12">
+									<input type="text" id="name" name="name" placeholder="Name" class="span12 required">
+								</div>
+							</div>
+							<div class="row no-margin">
+								<div class="span12">
+									<input type="text" id="email" name="email" placeholder="email" class="span12 required email">
+								</div>
+							</div>
+
+							<button class="btn">
+								Subscribe
+							</button>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end footer -->
+
+		<!-- scripts -->
+		<script src="js/jquery-1.8.0.min.js"></script>
+		<script src="js/jquery-ui-1.9.0.custom.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/selectnav.min.js"></script>
+		<script src="js/jquery-easing.js"></script>
+		<script src="js/jquery.lavalamp.min.js"></script>
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<script src="js/camera.min.js"></script>
+		<script src="js/hoverIntent.js"></script>
+		<script src="js/jquery.isotope.min.js"></script>
+		<script src="js/jquery.animate-shadow-min.js"></script>
+		<script src="js/bootstrap-datepicker.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/additional-methods.min.js"></script>
+		<script src="js/jquery.colorbox-min.js"></script>
+		<script src="js/jquery.bxslider.min.js"></script>
+		<script src="js/modernizr.custom.97074.js"></script>
+		<script src="js/jquery.hoverdir.js"></script>
+		<script src="js/standard.js"></script>
+
+		<script type="text/javascript">
+			// The twitter accounts that will be included in the ticker
+			var tweetUsers = ['speckyboy'];
+		</script>
+
+		<script src="js/jquery-twitter.js"></script>
+
+		<!-- end scripts -->
+	</body>
+
+</html>
