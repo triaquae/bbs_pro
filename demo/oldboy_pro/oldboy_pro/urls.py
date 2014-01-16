@@ -14,4 +14,6 @@ urlpatterns = patterns('',
 
 	(r'^$', index),
 	(r'^python/$', python_bbs),
+	(r'^bbs_detail/$', bbs_detail),
+	
 )

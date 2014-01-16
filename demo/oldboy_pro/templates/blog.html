@@ -10,19 +10,16 @@
 					{% for bbs in bbs_list%}
 					<div class="blog-post">
 						<div class="info">
-							<h4>First blog post {{ bbs.title}}</h4>
+							<h4><img width=35 height=35 src="/static/img/wanxingming.jpg" /><a id="bbs_{{bbs.id}}" href="javascript:void(0);" onclick="get_bbs('bbs_{{bbs.id}}' )"> First blog post {{ bbs.title}}</a></h4>
 							<p>
 								{{ bbs.content|truncatechars:100 }}
 							</p>
 						</div>
 						<div class="bottom">
-							<a href="blog.html#"><span class="label label-info">Snipp</span></a>
-							<a href="blog.html#"><span class="label label-info">Bootstrap</span></a>
-							<a href="blog.html#"><span class="label label-info">UI</span></a>
-							<a href="blog.html#"><span class="label label-info">growth</span></a>
+							<a href="blog.html#"><span class="label label-info">{{bbs.author  }}</span></a><b> . 生活如此的美好！！｜python开发4期</b>
 							<div class="pull-right">
-								<i class="icon-calendar"></i><b>{{bbs.author  }}</b> 发布: {{ bbs.publish_date|date:"Y-m-j H:i" }} <span class="marginlr5">|</span><i class="icon-comment"></i><a href="blog.html#">3 Comments</a>
-								<span class="marginlr5">|</span><i class="icon-share"></i><a href="blog.html#">39 Shares</a>
+								<i class="icon-calendar"></i> 发布: {{ bbs.publish_date|date:"Y-m-j H:i" }} <span class="marginlr5">|</span><i class="icon-comment"></i><a href="blog.html#">评论(3)</a>
+								<span class="marginlr5">|</span><i class="icon-share"></i><a href="blog.html#">点赞(445)</a>
 							</div>
 						</div>
 					</div>
@@ -53,6 +50,12 @@
 							Search
 						</button>
 					</div>
+				
+	<form action="/bbs_detail/" method="post">
+		<input type="textarea" />
+		<input type="submit" value="submit" />
+	</form>
+	
 					<h4>Category</h4>
 					<ul class="category">
 						<li>
@@ -91,6 +94,14 @@
 				</div>
 			</div>
 		</div>
+
+
+		<script type="text/javascript">
+		        	function get_bbs(bbs_id){
+                			$.redirect('/bbs_detail/', {BBS_ID: bbs_id } );
+        			}	
+		</script>
+
 		{% endblock%}	
 		<!-- footer -->
 		<!-- end footer -->
