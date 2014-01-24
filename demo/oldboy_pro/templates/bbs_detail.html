@@ -1,4 +1,5 @@
 {%  extends 'index.html' %}
+{%  load comments %}
 <!DOCTYPE html>
 <html>
 
@@ -9,20 +10,21 @@
 				<div class="span8">
 					<div class="blog-post">
 						<div class="info">
-							<h4>{{ bbs_obj.title}}</h4>
+							<a href="javascript:void(0);" onclick="goBack()"><i class=" sf-icon-reply-all-1"> go back</i></a>
+							<h4>{{ bbs_obj.title }} <span style="font-size:12px" >|{{ bbs_obj.publish_date|date:"Y-m-j H:i" }} &nbsp;作者:{{bbs_obj.author}} </span> </h4>
 							<p>
 								{{bbs_obj.content}}
 							</p>
 						</div>
 						<div class="bottom">
-							<div class="pull-right">
-								<i class="icon-calendar"></i> {{ bbs.publish_date|date:"Y-m-j H:i" }} <span class="marginlr5">|</span><i class="icon-comment"></i><a href="blog.html#">评论(3)</a>
+							<div class="pull-right">{% get_comment_count for bbs_obj as comment_count %}
+								<i class="icon-calendar"></i> {{ bbs.publish_date|date:"Y-m-j H:i" }} <span class="marginlr5">|</span><i class="icon-comment"></i>评论({{ comment_count}})
 								<span class="marginlr5">|</span><i class="icon-share"></i><a href="blog.html#">点赞(445)</a>
 							</div>
 						</div>
 						
 <!-- sub msg-->
-						<form id="sf-form" action='contacts.html' method="POST">
+						<form id="sf-form" action='/addcomment/' method="GET">
                                                 <!--div class="row no-margin">
                                                         <div class="span4">
                                                                 <select class="span12 sf-tooltip" id="inputGender" placeholder="Gender" rel="tooltip" data-placement="top" data-title="Gender">
@@ -30,23 +32,25 @@
                                                                         <option>female</option>
                                                                 </select>
                                                         </div>
+                                                </div-->
                                                         <div class="span4">
                                                                 <input type="text" id="name" name="name" placeholder="Name" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Name">
                                                         </div>
                                                         <div class="span4">
                                                                 <input type="text" id="email" name="email" placeholder="email" class="span12 required email sf-tooltip" rel="tooltip" data-placement="top" data-title="email">
+							<input type="hidden" value="{{bbs_obj.id}}" name="bbs_id"> 
                                                         </div>
-                                                </div-->
                                                 <div class="row no-margin">
                                                         <div class="span12">
-                                                                <textarea rows="3" id="message" name="message" placeholder="Message..." class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Message..."></textarea>
+                                                                <textarea rows="3" id="comment" name="message" placeholder="Message..." class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Message..."></textarea>
                                                         </div>
+
                                                 </div>
-                                                <button class="btn">
-                                                       	提交 
+                                                <button class="btn btn-success">
+                                                       	发布 
                                                 </button>
                                         	</form>
-
+						{% render_comment_list for bbs_obj %}
 <!--end sub msg-->
 					</div>
 				</div>
@@ -62,11 +66,9 @@
 					<h4>关于作者</h4>
 					<ul class="category">
 							<img width=50 height=50 src="/static/img/wanxingming.jpg" />&nbsp;<span class="label label-warning">{{bbs_obj.author}}</span>
-							国国际长途电话区号的美国国家/地First Category
+							{{bbs_obj.author.signature}}	
 							<li></li>
-							Second Category
-							Another Category
-							Second Category
+							{{bbs_obj.author.class_name}}<br>
 					</ul>
 
 					<div>
@@ -94,6 +96,11 @@
 		        	function get_bbs(bbs_id){
                 			//$.redirect('/bbs_detail/', {BBS_ID: bbs_id } );
         			}	
+
+				function goBack()
+				  {
+				  window.history.back()
+				  }
 		</script>
 
 		{% endblock%}	

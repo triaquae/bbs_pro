@@ -8,6 +8,7 @@ class web_user(models.Model):
     email = models.EmailField()        
     class_name = models.ForeignKey('class_list') 
     photo =  models.CharField(max_length=100,default="user-1.jpg") 
+    signature = models.CharField(max_length=150,default="lazy guy, got nothing left here...")
     def __unicode__(self):
         return '%s' % self.user
 
