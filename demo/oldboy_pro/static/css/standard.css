@@ -445,7 +445,8 @@ ul.navsub li a:hover {
 	border-bottom: 1px solid #E4E4E4;
 	line-height: 30px;
 	font-size: 11px;
-	margin: 20px 0 80px;
+	//margin: 20px 0 80px;
+	margin: 20px 0 30px;
 }
 
 .blog-post .author {

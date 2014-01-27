@@ -20,11 +20,16 @@ class class_list(models.Model):
 
 class bbs(models.Model):
 	title = models.CharField(max_length=100,unique=True)
+	color = (('#E1F5A9', 'light-yellow'),('#FA8258', 'orange'), ('#81F7F3', 'sky-blue'),('#BEF781','light-green'), ('#E6E6E6','gray'),('#F6CEF5','pink'))
+    	color_type = models.CharField(max_length=100, choices= color, default=None)
 	choice = (('Linux', 'Linux-bbs'),('Python', 'Python-bbs'), ('Hiring', 'Hiring-bbs'))
     	category = models.CharField(max_length=100, choices= choice)
 	publish_date = models.DateTimeField() 	
 	author = models.ForeignKey(web_user)
 	content = models.TextField()
+	comment_count = models.IntegerField(default=0)
+	view_count = models.IntegerField(default=0)
+	agree_count = models.IntegerField(default=0)
 	
 	def __unicode__(self):
 		return self.title

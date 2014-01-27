@@ -1,16 +1,20 @@
 {%  extends 'index.html' %}
+{% load pagination_tags %}
+{% load comments %}
 <!DOCTYPE html>
 <html>
 
 		<body>
 		{% block page-content%}
+
 		<div class="container min-height">
 			<div class="row-fluid">
 				<div class="span8">
+					{% autopaginate bbs_list 15 %}
 					{% for bbs in bbs_list%}
 					<div class="blog-post">
 						<div class="info">
-							<h4><img width=35 height=35 src="/static/img/wanxingming.jpg" /><a id="bbs_{{bbs.id}}" href="javascript:void(0);" onclick="get_bbs('bbs_{{bbs.id}}' )"> First blog post {{ bbs.title}}</a></h4>
+							<h4 style="background-color:{{bbs.color_type}}"><img width=35 height=35 src="/static/img/wanxingming.jpg" />&nbsp;&nbsp;<a style="text-decoration:none;color:#444;" id="bbs_{{bbs.id}}" href="javascript:void(0);" onclick="get_bbs('bbs_{{bbs.id}}' )">{{ bbs.title}}</a></h4>
 							<p>
 								{{ bbs.content|truncatechars:100 }}
 							</p>
@@ -18,15 +22,19 @@
 						<div class="bottom">
 							<a href="blog.html#"><span class="label label-info">{{bbs.author  }}</span></a><b> . 生活如此的美好！！｜python开发4期</b>
 							<div class="pull-right">
-								<i class="icon-calendar"></i> 发布: {{ bbs.publish_date|date:"Y-m-j H:i" }} <span class="marginlr5">|</span><i class="icon-comment"></i><a href="blog.html#">评论(3)</a>
-								<span class="marginlr5">|</span><i class="icon-share"></i><a href="blog.html#">点赞(445)</a>
+								<i class="icon-calendar"></i> 发布: {{ bbs.publish_date|date:"Y-m-j H:i" }} 
+								<span class="marginlr5">|</span><i class="icon-comment"></i>浏览({{bbs.view_count }})
+								{% get_comment_count for bbs as comment_count %}
+								<span class="marginlr5">|</span><i class=" sf-icon-comment-2"></i><a href="javascript:void(0);" onclick="get_bbs('bbs_{{bbs.id}}' )"> 评论({{ comment_count}})</a>
+								<span class="marginlr5">|</span><i class=" sf-icon-thumbs-up-1"></i><a href="javascript:void(0);" onclick="get_bbs('bbs_{{bbs.id}}' )"> 赞({{ bbs.agree_count}})</a>
 							</div>
 						</div>
 					</div>
 					{% endfor%}
+					<span align="center">{% paginate%}</span>
 					<div class="blog-post">
 						<div class="info">
-							<h4>First blog post</h4>
+							<h4 style="background-color:#FA8258">First blog post</h4>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Maecenas tincidunt ornare tellus, a mollis dui venenatis quis.
 							</p>
@@ -51,10 +59,6 @@
 						</button>
 					</div>
 				
-	<form action="/bbs_detail/" method="post">
-		<input type="textarea" />
-		<input type="submit" value="submit" />
-	</form>
 	
 					<h4>Category</h4>
 					<ul class="category">

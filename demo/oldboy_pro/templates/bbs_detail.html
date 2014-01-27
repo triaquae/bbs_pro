@@ -11,28 +11,22 @@
 					<div class="blog-post">
 						<div class="info">
 							<a href="javascript:void(0);" onclick="goBack()"><i class=" sf-icon-reply-all-1"> go back</i></a>
-							<h4>{{ bbs_obj.title }} <span style="font-size:12px" >|{{ bbs_obj.publish_date|date:"Y-m-j H:i" }} &nbsp;作者:{{bbs_obj.author}} </span> </h4>
+							<h4 style="padding:10px;background-color:{{bbs_obj.color_type}}">{{ bbs_obj.title }} <span style="font-size:12px" >|{{ bbs_obj.publish_date|date:"Y-m-j H:i" }} &nbsp;作者:{{bbs_obj.author}} </span> </h4>
 							<p>
 								{{bbs_obj.content}}
 							</p>
 						</div>
 						<div class="bottom">
 							<div class="pull-right">{% get_comment_count for bbs_obj as comment_count %}
-								<i class="icon-calendar"></i> {{ bbs.publish_date|date:"Y-m-j H:i" }} <span class="marginlr5">|</span><i class="icon-comment"></i>评论({{ comment_count}})
-								<span class="marginlr5">|</span><i class="icon-share"></i><a href="blog.html#">点赞(445)</a>
+								<i class="icon-calendar"></i> {{ bbs.publish_date|date:"Y-m-j H:i" }}
+								<span class="marginlr5">|</span><i class="icon-comment"></i>浏览({{bbs_obj.view_count }})
+                                                                <span class="marginlr5">|</span><i class=" sf-icon-comment-2"></i> 评论({{comment_count}})
+                                                                <span class="marginlr5">|</span><i class=" sf-icon-thumbs-up-1"></i> 赞<span id="agree_count">({{ bbs_obj.agree_count}})</span> 
 							</div>
 						</div>
 						
 <!-- sub msg-->
 						<form id="sf-form" action='/addcomment/' method="GET">
-                                                <!--div class="row no-margin">
-                                                        <div class="span4">
-                                                                <select class="span12 sf-tooltip" id="inputGender" placeholder="Gender" rel="tooltip" data-placement="top" data-title="Gender">
-                                                                        <option>游客</option>
-                                                                        <option>female</option>
-                                                                </select>
-                                                        </div>
-                                                </div-->
                                                         <div class="span4">
                                                                 <input type="text" id="name" name="name" placeholder="Name" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Name">
                                                         </div>
@@ -46,11 +40,22 @@
                                                         </div>
 
                                                 </div>
-                                                <button class="btn btn-success">
-                                                       	发布 
-                                                </button>
-                                        	</form>
-						{% render_comment_list for bbs_obj %}
+                                                <button class="btn btn-success">发布</button>
+                                                <i class=" sf-icon-thumbs-up-1"></i><a href="javascript:void(0);" onclick="agree()" id="agree_button" >赞一个</a>
+                                        	</form> <br/>
+						{% get_comment_list for bbs_obj  as comment_list%}
+						{% for comment in comment_list reversed%}
+							<div id="{{ comment.id}}" style="margin-top:0px"> 
+								<i style="font-size:50px;" class="sf-icon-user-3" >|</i>
+								<div style="margin-left:80px;margin-top:-50px">
+									<span style="font-size:10px"> {{ comment.user_name}}  &nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;{{comment.submit_date|date:"Y-m-j H:i" }}  <i style="margin-left:50px" class=" sf-icon-feather"></i> <a href="javascript:void(0);" onclick="addReply({{ comment.id}})">回复</a> </span> <br/>
+									{{ comment.comment }} <hr/>
+								</div>
+								{% if comment.ip_address%}
+									<p style="color:red">{{ comment.ip_address }}</p>  {{ comment.id }}
+								{% endif %}
+							</div>
+						{%endfor%}
 <!--end sub msg-->
 					</div>
 				</div>
@@ -101,6 +106,41 @@
 				  {
 				  window.history.back()
 				  }
+				function addReply(comment_id){
+					var formExist = $('#'+comment_id + ' ' + '#sf-form' ).length;
+					if(formExist == 0){
+						$("#sf-form" ).clone().appendTo("#"+comment_id);
+						$("<input type='hidden' value='" + comment_id + "' name='comment_id' />").appendTo( '#'+comment_id + ' ' + '#sf-form' );
+					}else{
+						$( '#'+comment_id + ' ' + '#sf-form' ).remove();
+					}	
+		
+				}
+	
+				function agree(){
+						if ( $("#agree_button").text() == "赞一个" ){
+						   $.post('/add_agree/', {bbs_id: "{{bbs_obj.id}}", agree: 'YES'}).done(function(result){
+                                                	$("#agree_count").html("("+ result + ")");
+                                                	$("#agree_count").css("background-color", "#D0FA58");
+                                                	$("#agree_count").css("font-size", "20px");
+							$("#agree_button").text("取消赞");	
+						   });
+						}else {
+						   $("#agree_button").text("赞一个");  
+					                $.post('/add_agree/', {bbs_id: "{{bbs_obj.id}}", agree:'NO'}).done(function(result){
+                                                	$("#agree_count").html("("+ result + ")");
+                                                	$("#agree_count").css("background-color", "#D0FA58");
+                                                	$("#agree_count").css("font-size", "20px");
+						   });
+						}
+				}
+		
+				/*$(document).ready(function(){
+					$('#agree').click(function(){
+						alert('up');
+					});
+
+				}); */
 		</script>
 
 		{% endblock%}	
