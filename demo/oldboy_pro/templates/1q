@@ -26,7 +26,7 @@
 						</div>
 						
 <!-- sub msg-->
-						<form id="sf-form" action='/addcomment/' method="POST">
+						<form id="sf-form" action='/addcomment/' method="GET">
                                                         <div class="span4">
                                                                 <input type="text" id="name" name="name" placeholder="Name" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Name">
                                                         </div>
@@ -61,11 +61,17 @@
 <!-- add child comments--> 
 <script src="/static/js/jquery-1.8.0.min.js"></script> 
 						{%  for c in bbs_comments%}
+								<h3>{{ c.id }} ip {{c.ip_address }} {{c.comment}} </h3>
 							{% if c.ip_address%}	
-								<span id="child_id_{{c.id}}"> {{c.comment }} </span>
 								<script  type="text/javascript">
-								  $("<div id='{{ c.id}}' style='margin-top:0px;margin-left:50px'><i style='font-size:35px;' class='sf-icon-user-3' >|</i><div style='margin-left:50px;margin-top:-40px'><span style='font-size:10px'> {{ c.user_name}}  &nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;{{c.submit_date|date:'Y-m-j H:i' }}  <i style='margin-left:50px' class=' sf-icon-feather'></i> <a href='javascript:void(0);' onclick='addReply({{ c.id}})'>回复</a> </span> <br/><p> </p> <hr/></div></div>").appendTo("#"+{{c.ip_address}});
-								  $("#child_id_{{c.id}}").appendTo("#{{c.id}} p");
+								  $('<div id="{{ c.id}}" style="margin-top:0px">
+                                                                		<i style="font-size:50px;" class="sf-icon-user-3" >|</i>
+                                                                		<div style="margin-left:150px;margin-top:-50px">
+                                                                        		<span style="font-size:10px"> {{ c.user_name}}  &nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;{{c.submit_date|date:"Y-m-j H:i" }}  <i style="margin-left:50px" class=" sf-icon-feather"></i> <a href="javascript:void(0);" onclick="addReply({{ c.id}})">回复</a> </span> <br/>
+                                                                        		{{ c.comment }} <hr/>
+                                                                		</div>
+                                                        		</div>
+								 ').appendTo("#"+{{c.ip_address}});
 									//alert({{ c.ip_address}});
 								 </script>
 							{%endif%}

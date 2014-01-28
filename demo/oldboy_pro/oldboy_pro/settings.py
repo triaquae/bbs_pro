@@ -41,6 +41,7 @@ INSTALLED_APPS = (
 	'bbs',
 	'south',
 	'pagination',
+	'debugtools',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

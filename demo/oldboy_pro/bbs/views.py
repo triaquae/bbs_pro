@@ -4,7 +4,11 @@ from django.http import HttpResponseRedirect, HttpResponse
 from bbs.models import *
 from django.contrib import comments 
 # Create your views here.
-import datetime
+import datetime,time
+
+
+new_comment_dic ={}
+
 
 
 def index(request):
@@ -17,17 +21,34 @@ def python_bbs(request):
 	#return render_to_response('blog.html', {'bbs_list': bbs_list})
 
 def add_comment(request):
-	print request.GET
+	print request.POST
+	s=request.session
+	print s._session_key,'============',request.COOKIES['sessionid']
 	parent_comment_id = ''
-	name,email,msg = request.GET['name'], request.GET['email'], request.GET['message']
-
-	if request.GET.has_key('comment_id'):parent_comment_id = request.GET['comment_id']
-	bbs_id = request.GET['bbs_id']
-	a=comments.models.Comment.objects.create(content_type_id = 9, object_pk=bbs_id, ip_address= parent_comment_id,  site_id=1, user_name=name,user_email=email, comment= msg ,submit_date=datetime.datetime.now())
-	a.save()
-	bbs_obj = bbs.objects.get(id = bbs_id)
+	name,email,msg = request.POST['name'], request.POST['email'], request.POST['message']
 	
-	return render_to_response('bbs_detail.html', {'bbs_obj':bbs_obj})
+	if request.POST.has_key('comment_id'):parent_comment_id = request.POST['comment_id']  #this comment is a child comment 
+	bbs_id = request.POST['bbs_id']
+	
+	print new_comment_dic
+
+	if new_comment_dic.has_key(s._session_key):
+		time_diff = time.time() - new_comment_dic[ s._session_key ]
+		if time_diff >30:
+			a=comments.models.Comment.objects.create(content_type_id = 9, object_pk=bbs_id, ip_address= parent_comment_id,  site_id=1, user_name=name,user_email=email, comment= msg ,submit_date=datetime.datetime.now())
+			a.save()
+	                new_comment_dic[s._session_key]  = time.time() #add a new comment mark or renew the time stamp  
+		else:
+			print "need to send a comment after %s seconds" % time_diff
+                        return HttpResponse("need to send a comment after %s seconds" % time_diff)
+	else:  #first time submit the comment
+		new_comment_dic[s._session_key]  = time.time() #add a new comment mark or renew the time stamp  
+		a=comments.models.Comment.objects.create(content_type_id = 9, object_pk=bbs_id, ip_address= parent_comment_id,  site_id=1, user_name=name,user_email=email, comment= msg ,submit_date=datetime.datetime.now())
+		a.save()
+
+	bbs_obj = bbs.objects.get(id = bbs_id)
+	bbs_comments = comments.models.Comment.objects.filter(object_pk= bbs_id)
+	return render_to_response('bbs_detail.html', {'bbs_obj':bbs_obj, 'bbs_comments': bbs_comments})
 
 def add_agree(request):
 	bbs_id = request.POST['bbs_id']
