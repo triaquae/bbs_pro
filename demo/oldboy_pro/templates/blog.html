@@ -11,16 +11,16 @@
 			<div class="row-fluid">
 				<div class="span8">
 					{% autopaginate bbs_list 15 %}
-					{% for bbs in bbs_list%}
+					{% for bbs in bbs_list reversed%}
 					<div class="blog-post">
 						<div class="info">
-							<h4 style="background-color:{{bbs.color_type}}"><img width=35 height=35 src="/static/img/wanxingming.jpg" />&nbsp;&nbsp;<a style="text-decoration:none;color:#444;" id="bbs_{{bbs.id}}" href="javascript:void(0);" onclick="get_bbs('bbs_{{bbs.id}}' )">{{ bbs.title}}</a></h4>
+							<h4 style="background-color:{{bbs.color_type}}"><img width=35 height=35 src="/static/{{ bbs.author.photo}}" />&nbsp;&nbsp;<a style="text-decoration:none;color:#444;" id="bbs_{{bbs.id}}" href="javascript:void(0);" onclick="get_bbs('bbs_{{bbs.id}}' )">{{ bbs.title}}</a></h4>
 							<p>
 								{{ bbs.content|truncatechars:100 }}
 							</p>
 						</div>
 						<div class="bottom">
-							<a href="blog.html#"><span class="label label-info">{{bbs.author  }}</span></a><b> . 生活如此的美好！！｜python开发4期</b>
+							<a href="blog.html#"><span class="label label-info">{{bbs.author  }}</span></a> {{ bbs.author.signature}}
 							<div class="pull-right">
 								<i class="icon-calendar"></i> 发布: {{ bbs.publish_date|date:"Y-m-j H:i" }} 
 								<span class="marginlr5">|</span><i class="icon-comment"></i>浏览({{bbs.view_count }})
@@ -52,15 +52,18 @@
 					</div>
 				</div>
 				<div class="span3 offset1 blog-sidebar">
-					<div class="input-append">
+					<!--div class="input-append">
 						<input class="span8" id="appendedInputButtons" type="text">
 						<button class="btn" type="button">
 							Search
 						</button>
-					</div>
-				
+					</div-->
+                                        <div class="category">
+					<br/>
+                                        <a href="#" class="button glow button-rounded button-flat-action" style="padding-left:30px;padding-right:30px;text-decoration:none;color:white">发 帖</a>
+					</div>	
 	
-					<h4>Category</h4>
+					<h4>近期热贴</h4>
 					<ul class="category">
 						<li>
 							<a href="blog.html#">First Category</a>
@@ -80,7 +83,7 @@
 					</ul>
 
 					<div>
-						<h4>Tag cloud</h4>
+						<h4>最新评论</h4>
 						<hr class="small">
 						<a href="blog.html#" class="label label-info">Category</a>
 						<a href="blog.html#" class="label label-info">Beach</a>

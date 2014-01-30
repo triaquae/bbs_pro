@@ -27,19 +27,29 @@
 						
 <!-- sub msg-->
 						<form id="sf-form" action='/addcomment/' method="POST">
+						   {% if login_user.is_authenticated %}
+								<div class="row no-margin">
+								  <div class="span12">
+									<textarea rows="3" id="comment" name="message" placeholder="Message..." class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Message..."></textarea>
+								  </div>
+
+								</div>
+						   {%else%}
+		
                                                         <div class="span4">
                                                                 <input type="text" id="name" name="name" placeholder="Name" class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Name">
                                                         </div>
                                                         <div class="span4">
                                                                 <input type="text" id="email" name="email" placeholder="email" class="span12 required email sf-tooltip" rel="tooltip" data-placement="top" data-title="email">
-							<input type="hidden" value="{{bbs_obj.id}}" name="bbs_id"> 
                                                         </div>
-                                                <div class="row no-margin">
-                                                        <div class="span12">
-                                                                <textarea rows="3" id="comment" name="message" placeholder="Message..." class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Message..."></textarea>
-                                                        </div>
+							<div class="row no-margin">
+								<div class="span12">
+									<textarea rows="3" id="comment" name="message" placeholder="Message..." class="span12 required sf-tooltip" rel="tooltip" data-placement="top" data-title="Message..."></textarea>
+								</div>
 
-                                                </div>
+							</div>
+						  {%endif%}
+						<input type="hidden" value="{{bbs_obj.id}}" name="bbs_id"> 
                                                 <button class="btn btn-success">发布</button>
                                                 <i class=" sf-icon-thumbs-up-1"></i><a href="javascript:void(0);" onclick="agree()" id="agree_button" >赞一个</a>
                                         	</form> <br/>

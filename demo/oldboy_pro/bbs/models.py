@@ -1,13 +1,18 @@
 from django.db import models
+from django import forms
 from django.contrib.auth.models import User
 # Create your models here.
 
 
+
+class ImageUploadForm(forms.Form):
+    """Image upload form."""
+    image = forms.ImageField()
 class web_user(models.Model):
     user = models.ForeignKey(User, null=True)
     email = models.EmailField()        
     class_name = models.ForeignKey('class_list') 
-    photo =  models.CharField(max_length=100,default="user-1.jpg") 
+    photo = models.ImageField(upload_to="upload_imgs/" ,default="user-1.jpg") 
     signature = models.CharField(max_length=150,default="lazy guy, got nothing left here...")
     def __unicode__(self):
         return '%s' % self.user

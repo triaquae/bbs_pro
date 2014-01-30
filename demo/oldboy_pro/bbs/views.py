@@ -5,37 +5,72 @@ from bbs.models import *
 from django.contrib import comments 
 # Create your views here.
 import datetime,time
+from django.contrib.auth.decorators import login_required 
+from django.contrib import auth
 
 
 new_comment_dic ={}
 
+def login(request):
+	return render_to_response('login.html')
 
+def personal_info(request):
+	return render_to_response("personal_info.html", {'login_user':request.user})
+
+def upload_pic(request):
+    if request.method == 'POST':
+	print '========'
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            p = web_user.objects.get(user =  request.user.id)
+            p.photo = form.cleaned_data['image']
+            p.save()
+            return HttpResponse('image upload success')
+    return HttpResponse('allowed only via POST')
+
+
+
+def account_login(request):
+        username = request.POST['user']
+        password = request.POST.get('password','')
+        user = auth.authenticate(username=username,password=password)
+        print user,'====='
+	if user is not None: #and user.is_active:
+                #correct password and user is marked "active"
+                auth.login(request,user)
+                return HttpResponseRedirect("/")
+        else:
+                return render_to_response('login.html',{'err':'Wrong username or password!'})
 
 def index(request):
 
-	return render_to_response('index.html')
+	return render_to_response('index.html',{'login_user': request.user})
 
 def python_bbs(request):
 	bbs_list = bbs.objects.all()
-	return render_to_response('blog.html', {'bbs_list': bbs_list},context_instance=RequestContext(request))
+	return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user},context_instance=RequestContext(request))
 	#return render_to_response('blog.html', {'bbs_list': bbs_list})
 
 def add_comment(request):
 	print request.POST
 	s=request.session
-	print s._session_key,'============',request.COOKIES['sessionid']
 	parent_comment_id = ''
-	name,email,msg = request.POST['name'], request.POST['email'], request.POST['message']
+	if not request.user.is_authenticated():
+		print '\033[34;1m-----\033[0m',request.user ,request.user.id
+		 
+		name,email,msg = request.POST['name'], request.POST['email'], request.POST['message']
+	else:
+		msg = request.POST['message']
+		email, name = request.user.email, request.user.username
 	
 	if request.POST.has_key('comment_id'):parent_comment_id = request.POST['comment_id']  #this comment is a child comment 
 	bbs_id = request.POST['bbs_id']
-	
 	print new_comment_dic
 
 	if new_comment_dic.has_key(s._session_key):
 		time_diff = time.time() - new_comment_dic[ s._session_key ]
 		if time_diff >30:
-			a=comments.models.Comment.objects.create(content_type_id = 9, object_pk=bbs_id, ip_address= parent_comment_id,  site_id=1, user_name=name,user_email=email, comment= msg ,submit_date=datetime.datetime.now())
+			a=comments.models.Comment.objects.create(content_type_id = 9, object_pk=bbs_id, ip_address= parent_comment_id,user=request.user,  site_id=1, user_name=name,user_email=email, comment= msg ,submit_date=datetime.datetime.now())
 			a.save()
 	                new_comment_dic[s._session_key]  = time.time() #add a new comment mark or renew the time stamp  
 		else:
@@ -43,12 +78,12 @@ def add_comment(request):
                         return HttpResponse("need to send a comment after %s seconds" % time_diff)
 	else:  #first time submit the comment
 		new_comment_dic[s._session_key]  = time.time() #add a new comment mark or renew the time stamp  
-		a=comments.models.Comment.objects.create(content_type_id = 9, object_pk=bbs_id, ip_address= parent_comment_id,  site_id=1, user_name=name,user_email=email, comment= msg ,submit_date=datetime.datetime.now())
+		a=comments.models.Comment.objects.create(content_type_id = 9, object_pk=bbs_id, ip_address= parent_comment_id,  site_id=1,user=request.user, user_name=name,user_email=email, comment= msg ,submit_date=datetime.datetime.now())
 		a.save()
 
 	bbs_obj = bbs.objects.get(id = bbs_id)
 	bbs_comments = comments.models.Comment.objects.filter(object_pk= bbs_id)
-	return render_to_response('bbs_detail.html', {'bbs_obj':bbs_obj, 'bbs_comments': bbs_comments})
+	return render_to_response('bbs_detail.html', {'bbs_obj':bbs_obj, 'bbs_comments': bbs_comments,'login_user': request.user})
 
 def add_agree(request):
 	bbs_id = request.POST['bbs_id']
@@ -70,7 +105,7 @@ def bbs_detail(request):
 		print bbs_comments
 		bbs_obj.view_count += 1
 		bbs_obj.save()
-		return render_to_response('bbs_detail.html', {'bbs_obj':bbs_obj, 'bbs_comments': bbs_comments})
+		return render_to_response('bbs_detail.html', {'bbs_obj':bbs_obj, 'bbs_comments': bbs_comments, 'login_user': request.user})
 	else:
 		bbs_list = bbs.objects.all()
 		return render_to_response('blog.html', {'bbs_list': bbs_list})
