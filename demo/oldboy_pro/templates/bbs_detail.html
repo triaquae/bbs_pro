@@ -32,8 +32,7 @@
 					<div class="blog-post">
 						<div class="info">
 							<h4 style="padding:10px;background-color:{{bbs_obj.color_type}}">{{ bbs_obj.title }} <span style="font-size:12px" >|{{ bbs_obj.publish_date|date:"Y-m-j H:i" }} &nbsp;作者:{{bbs_obj.author}} </span> </h4>
-							<p>
-								{{bbs_obj.content}}
+							<p id="content_{{bbs_obj.id}}">
 							</p>
 						</div>
 						<div class="bottom">
@@ -152,6 +151,8 @@
 
 
 		<script type="text/javascript">
+
+				$("#content_{{bbs_obj.id}}").load("/get_bbs_content/{{bbs_obj.id}}"); 
 		        	function get_bbs(bbs_id){
                 			//$.redirect('/bbs_detail/', {BBS_ID: bbs_id } );
         			}	

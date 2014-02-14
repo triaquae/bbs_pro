@@ -17,19 +17,25 @@ def login(request):
 def personal_info(request):
 	return render_to_response("personal_info.html", {'login_user':request.user})
 
+@login_required
 def new_article(request):
 	bbs_form = new_bbs_form() 
 	return render_to_response('new_article.html', {'bbs_form':bbs_form})
+
+def get_bbs_content(request,bbsid):
+	obj = bbs.objects.get(id = int(bbsid))
+	return HttpResponse(obj.content)
+
+
 def add_new_article(request):
-	print request.POST
 	web_user_name = web_user.objects.get(user__username=request.user)
-	bbs_category,color,bbs_title = request.POST['category'], request.POST['color_type'], request.POST['name']
+	bbs_category,color,bbs_title = request.POST['category'], request.POST['color_type'], request.POST['bbs_title']
 	
 	content = request.POST['content']
 	new_bbs_obj = bbs.objects.create(title = bbs_title, color_type= color, category = bbs_category, publish_date=datetime.datetime.now(), author = web_user_name, content = content )
 	new_bbs_obj.save()
 
-	return HttpResponse(content)
+	return HttpResponseRedirect("/%s/" % request.POST['category'])
 def upload_pic(request):
     if request.method == 'POST':
 	print '========'
@@ -60,9 +66,15 @@ def index(request):
 	return render_to_response('index.html',{'login_user': request.user})
 
 def python_bbs(request):
-	bbs_list = bbs.objects.all()
+	bbs_list = bbs.objects.filter(category= 'python').order_by('-publish_date')
 	return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user},context_instance=RequestContext(request))
-	#return render_to_response('blog.html', {'bbs_list': bbs_list})
+def linux_bbs(request):
+        bbs_list = bbs.objects.filter(category= 'linux').order_by('-publish_date')
+        return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user},context_instance=RequestContext(request))
+def diary(request):
+        bbs_list = bbs.objects.filter(category= 'diary').order_by('-publish_date')
+        return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user},context_instance=RequestContext(request))
+
 
 def add_comment(request):
 	print request.POST

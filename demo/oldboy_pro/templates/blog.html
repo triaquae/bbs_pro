@@ -11,13 +11,13 @@
 			<div class="row-fluid">
 				<div class="span8">
 					{% autopaginate bbs_list 15 %}
-					{% for bbs in bbs_list reversed%}
+					{% for bbs in bbs_list %}
 					<div class="blog-post">
 						<div class="info">
-							<h4 style="background-color:{{bbs.color_type}}"><img class="profile_photo_intro" src="/static/{{ bbs.author.photo}}" />&nbsp;&nbsp;<a style="text-decoration:none;color:#444;" id="bbs_{{bbs.id}}" href="javascript:void(0);" onclick="get_bbs('bbs_{{bbs.id}}' )">{{ bbs.title}}</a></h4>
+							<h4 style="background-color:{{bbs.color_type}}_cancel"><a style="text-decoration:none;" id="bbs_{{bbs.id}}" href="javascript:void(0);" onclick="get_bbs('bbs_{{bbs.id}}' )">{{ bbs.title}}</a></h4>
 						</div>
 						<div class="bottom">
-							<a href="blog.html#"><span class="label label-info">{{bbs.author  }}</span></a> {{ bbs.author.signature}}
+							<a href="blog.html#"><span class="label label-success">{{bbs.author  }}</span></a> {{ bbs.author.signature}}
 							<div class="pull-right">
 								<i class="icon-calendar"></i> 发布: {{ bbs.publish_date|date:"Y-m-j H:i" }} 
 								<span class="marginlr5">|</span><i class="icon-comment"></i>浏览({{bbs.view_count }})
@@ -29,7 +29,7 @@
 					</div>
 					{% endfor%}
 					<span align="center">{% paginate%}</span>
-					<div class="blog-post">
+					<!--div class="blog-post">
 						<div class="info">
 							<h4 style="background-color:#FA8258">First blog post</h4>
 							<p>
@@ -46,7 +46,7 @@
 								<span class="marginlr5">|</span><i class="icon-share"></i><a href="blog.html#">39 Shares</a>
 							</div>
 						</div>
-					</div>
+					</div-->
 				</div>
 				<div class="span3 offset1 blog-sidebar">
 					<!--div class="input-append">
