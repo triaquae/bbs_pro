@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 from django import forms
 from django.contrib.auth.models import User
 # Create your models here.
@@ -11,8 +12,10 @@ class ImageUploadForm(forms.Form):
 class web_user(models.Model):
     user = models.ForeignKey(User, null=True)
     email = models.EmailField()        
-    class_name = models.ForeignKey('class_list') 
-    photo = models.ImageField(upload_to="upload_imgs/" ,default="user-1.jpg") 
+    class_name = models.ForeignKey('class_list')
+    photo_height=models.PositiveIntegerField()
+    photo_width=models.PositiveIntegerField() 
+    photo = models.ImageField(upload_to="upload_imgs/" ,height_field="photo_height",width_field="photo_width", default="user-1.jpg") 
     signature = models.CharField(max_length=150,default="lazy guy, got nothing left here...")
     def __unicode__(self):
         return '%s' % self.user
@@ -38,3 +41,8 @@ class bbs(models.Model):
 	
 	def __unicode__(self):
 		return self.title
+
+class new_bbs_form(ModelForm):
+	class Meta:
+		model = bbs
+		fields = ('title','color_type','category')

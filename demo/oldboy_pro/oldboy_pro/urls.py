@@ -23,5 +23,7 @@ urlpatterns = patterns('',
 	(r'^add_agree/$', add_agree),
 	(r'^personal_info/$', personal_info),
 	(r'^upload_pic/$', upload_pic),
+	(r'^add_new_article/$', add_new_article),
+	(r'new_article/$', new_article),
 	
 )

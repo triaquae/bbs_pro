@@ -1,0 +1,17 @@
+.profile_photo {
+        height:50px;
+        width:50px;
+        margin-top:-15px;
+}
+
+.profile_photo_child_comment {
+        height:35px;
+        width:35px;
+        margin-top:-10px;
+}
+
+
+.profile_photo_intro {
+        height:50px;
+        width:50px;
+}
