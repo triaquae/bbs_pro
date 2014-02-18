@@ -66,14 +66,25 @@ def index(request):
 	return render_to_response('index.html',{'login_user': request.user})
 
 def python_bbs(request):
+	hot_bbs = bbs.objects.order_by('-comment_count')[:5]
 	bbs_list = bbs.objects.filter(category= 'python').order_by('-publish_date')
-	return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user},context_instance=RequestContext(request))
+	hot_comments = comments.Comment.objects.order_by('-submit_date')[:5]
+	return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user,'hot_list':hot_bbs,'hot_comments': hot_comments},context_instance=RequestContext(request))
 def linux_bbs(request):
+	hot_bbs = bbs.objects.order_by('-comment_count')[:5]
+	hot_comments = comments.Comment.objects.order_by('-submit_date')[:5]
         bbs_list = bbs.objects.filter(category= 'linux').order_by('-publish_date')
-        return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user},context_instance=RequestContext(request))
+	return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user,'hot_list':hot_bbs,'hot_comments': hot_comments},context_instance=RequestContext(request))
 def diary(request):
+	hot_comments = comments.Comment.objects.order_by('-submit_date')[:5]
+	hot_bbs = bbs.objects.order_by('-comment_count')[:5]
         bbs_list = bbs.objects.filter(category= 'diary').order_by('-publish_date')
-        return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user},context_instance=RequestContext(request))
+	return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user,'hot_list':hot_bbs,'hot_comments': hot_comments},context_instance=RequestContext(request))
+def jobs(request):
+        hot_comments = comments.Comment.objects.order_by('-submit_date')[:5]
+        hot_bbs = bbs.objects.order_by('-comment_count')[:5]
+        bbs_list = bbs.objects.filter(category= 'hiring').order_by('-publish_date')
+        return render_to_response('blog.html', {'bbs_list': bbs_list,'login_user': request.user,'hot_list':hot_bbs,'hot_comments': hot_comments},context_instance=RequestContext(request))
 
 
 def add_comment(request):

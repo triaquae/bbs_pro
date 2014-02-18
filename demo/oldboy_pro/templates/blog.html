@@ -14,10 +14,10 @@
 					{% for bbs in bbs_list %}
 					<div class="blog-post">
 						<div class="info">
-							<h4 style="background-color:{{bbs.color_type}}_cancel"><a style="text-decoration:none;" id="bbs_{{bbs.id}}" href="javascript:void(0);" onclick="get_bbs('bbs_{{bbs.id}}' )">{{ bbs.title}}</a></h4>
+							<h4 style="background-color:{{bbs.color_type}}_cancel"><a style="text-decoration:none;" id="bbs_{{bbs.id}}" href="javascript:void(0);"   onclick="get_bbs('bbs_{{bbs.id}}' )">{{ bbs.title}}</a></h4>
 						</div>
 						<div class="bottom">
-							<a href="blog.html#"><span class="label label-success">{{bbs.author  }}</span></a> {{ bbs.author.signature}}
+							<a href="blog.html#"><span class="label label-success">{{bbs.author  }}</span></a> {{ bbs.author.class_name}}
 							<div class="pull-right">
 								<i class="icon-calendar"></i> 发布: {{ bbs.publish_date|date:"Y-m-j H:i" }} 
 								<span class="marginlr5">|</span><i class="icon-comment"></i>浏览({{bbs.view_count }})
@@ -37,9 +37,6 @@
 							</p>
 						</div>
 						<div class="bottom">
-							<a href="blog.html#"><span class="label label-info">Snipp</span></a>
-							<a href="blog.html#"><span class="label label-info">Bootstrap</span></a>
-							<a href="blog.html#"><span class="label label-info">UI</span></a>
 							<a href="blog.html#"><span class="label label-info">growth</span></a>
 							<div class="pull-right">
 								<i class="icon-calendar"></i> Sept 16th, 2012 at 4:20 pm <span class="marginlr5">|</span><i class="icon-comment"></i><a href="blog.html#">3 Comments</a>
@@ -49,51 +46,27 @@
 					</div-->
 				</div>
 				<div class="span3 offset1 blog-sidebar">
-					<!--div class="input-append">
-						<input class="span8" id="appendedInputButtons" type="text">
-						<button class="btn" type="button">
-							Search
-						</button>
-					</div-->
                                         <div class="category">
 					<br/>
                                         <a href="/new_article/" class="button glow button-rounded button-flat-action" style="padding-left:30px;padding-right:30px;text-decoration:none;color:white">发 帖</a>
 					</div>	
 	
-					<h4>近期热贴</h4>
+					<h4 class="font_style">近期热贴</h4>
+					<hr class="small">
 					<ul class="category">
-						<li>
-							<a href="blog.html#">First Category</a>
-						</li>
-						<li>
-							<a href="blog.html#">Second Category</a>
-						</li>
-						<li>
-							<a href="blog.html#">Second Category</a>
-						</li>
-						<li>
-							<a href="blog.html#">Another Category</a>
-						</li>
-						<li>
-							<a href="blog.html#">Second Category</a>
-						</li>
+						{% for hot_bbs in hot_list%}
+						  <a style="text-decoration:none;" href="javascript:void(0);" onclick="get_bbs('bbs_{{hot_bbs.id}}' )"> {{ hot_bbs.title|truncatechars:30 }} </a><br/><br/>
+						{%endfor%}
 					</ul>
 
 					<div>
-						<h4>最新评论</h4>
+						<h4 class="font_style" >最新评论</h4>
 						<hr class="small">
-						<a href="blog.html#" class="label label-info">Category</a>
-						<a href="blog.html#" class="label label-info">Beach</a>
-						<a href="blog.html#" class="label label-info">Chair</a>
-						<a href="blog.html#" class="label label-info">Category</a>
-						<a href="blog.html#" class="label label-info">Beach</a>
-						<a href="blog.html#" class="label label-info">Chair</a>
-						<a href="blog.html#" class="label label-info">Category</a>
-						<a href="blog.html#" class="label label-info">Beach</a>
-						<a href="blog.html#" class="label label-info">Chair</a>
-						<a href="blog.html#" class="label label-info">Category</a>
-						<a href="blog.html#" class="label label-info">Beach</a>
-						<a href="blog.html#" class="label label-info">Chair</a>
+						{% for comment in hot_comments%}
+							{{ comment.submit_date|date:"m月j H:i"}} {{comment.user}} 
+							<a style="text-decoration:none;" href="javascript:void(0);" onclick="get_bbs('bbs_{{comment.object_pk}}' )"><span style="font-size:12px">{{ comment.comment|truncatechars:35}} </span></a><br>
+						{%endfor %}
+						<!--a href="blog.html#" class="label label-info">Chair</a-->
 					</div>
 				</div>
 			</div>

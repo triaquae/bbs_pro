@@ -442,7 +442,7 @@ ul.navsub li a:hover {
 }
 
 .blog-post .bottom {
-	border-bottom: 1px solid #E4E4E4;
+	border-bottom: 1px dashed #E4E4E4;
 	line-height: 30px;
 	font-size: 11px;
 	//margin: 20px 0 80px;
@@ -494,9 +494,10 @@ ul.navsub li a:hover {
 
 .sf_footer {
 	margin-top: 40px;
-	background: #f2f2f2;
+	//background: #f2f2f2;
+	background: #fafafa;
 	padding-top: 30px;
-	border-top: 1px solid #aaaaaa;
+	//border-top: 1px solid #aaaaaa;
 }
 
 .sf_footer hr {

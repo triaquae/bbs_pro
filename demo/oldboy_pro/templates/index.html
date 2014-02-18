@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>老男孩｜BBS</title>
+		<title class="font_style">老男孩｜BBS</title>
 
 		<!-- http://twitter.github.com/bootstrap/ -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +70,7 @@
 
 						<!-- Be sure to leave the brand out there if you want it shown -->
 						<!--a class="brand myBrand" href="index.html"><img src="img/jodstrap-logo.png"></a-->
-						<a class="brand myBrand" href="index.html"><span style="color:red" class="sf-icon-light-up"></span>老男孩Linux</a>
+						<a class="brand myBrand  brand_font "  href="index.html"><span style="color:red" class="sf-icon-light-up"></span> 老男孩Linux</a>
 
 						<!-- Everything you want hidden at 940px or less, place within here -->
 						<!--<div class="nav-collapse">-->
@@ -94,27 +94,13 @@
 							</li>
 							<li id="features" class="Lava open-submenu">
 								<a href="/python/">Python<span><span class="hidden-desktop"> - </span>运维开发</span></a>
-								<ul class="navsub noLava">
-									<li class="noLava">
-										<a href="features.html#sf-typography">Typography</a>
-									</li>
-									<li class="noLava">
-										<a href="features.html#sf-icons">Icons</a>
-									</li>
-									<li class="noLava">
-										<a href="features.html#sf-form-validation">Form & Validation</a>
-									</li>
-									<li class="noLava">
-										<a href="features.html#sf-buttons">Buttons</a>
-									</li>
-								</ul>
 							</li>
 							<li id="contacts" class="Lava">
-								<a href="/diary/">学生日记 <span><span class="hidden-desktop"> - </span>学生日记</span></a>
+								<a href="/diary/">逆袭之路 <span><span class="hidden-desktop"> - </span>生活日记</span></a>
 							</li>
 							<li id="contacts" class="Lava">
                                                             {% if login_user.is_authenticated %}
-								<a href="/personal_info/">{{ login_user}} <span><span class="hidden-desktop"> - </span> 5 新消息</span></a>
+								<a href="/personal_info/">{{ login_user}} <span style="color:red"><span class="hidden-desktop"> - </span> 5 新消息</span></a>
 							    {%else%}
 								<a href="/login/">登录 <span><span class="hidden-desktop"></span>Login</span></a>
 							    {%endif%}     
@@ -130,7 +116,7 @@
 		<div id="page-content">
 		{%  block page-content %}
 		<!-- camera slider -->
-		<div class="container offset-top-xl">
+		<!--div class="container offset-top-xl">
 			<div class="camera_wrap camera_white_skin" id="camera_wrap_1">
 				<div data-thumb="/static/images/slides/thumbs/bridge.jpg" data-src="/static/images/slides/bridge.jpg">
 					<div class="camera_caption fadeFromBottom">
@@ -163,17 +149,16 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div-->
 		<!-- end camera slider -->
 
 		<!-- content area -->
 		<div class="container">
 			<!-- welcome text -->
 			<div class="row-fluid" align="center">
-				<hr>
-				<h4>好好学习 天天向上</h4>
+				<h3 class="font_style">好好学习 天天向上</h3>
 				<p>
-					Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit. Maecenas tincidunt ornare tellus, a mollis dui venenatis quis.
+				成为Linux高级运维架构师、 Python运维开发工程师，让我们一起致青春!
 				</p>
 				<hr>
 			</div>
@@ -181,33 +166,35 @@
 
 			<!-- row for /static/images -->
 			<div class="row-fluid offset-both">
-				<div class="span3">
-					<div class="offset-bottom"><img src="/static/misc/baking-cookies.jpg" />
+				<div class="span3" align="center">
+					<!--div class="offset-bottom"><img src="/static/misc/baking-cookies.jpg" /-->
+					<div class="offset-bottom"><img src="/static/Flat-UI-master/images/icons/svg/clocks.svg" />
 					</div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
-					</p>
+					<h4 class="index_category"> 
+						签到中心
+					</4>
 				</div>
-				<div class="span3">
-					<div class="offset-bottom"><img src="/static/misc/traffic.jpg" />
+				<div class="span3" align="center">
+					<div class="offset-bottom"><img src="/static/Flat-UI-master/images/icons/svg/gift-box.svg" />
 					</div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
-					</p>
+					<h4 class="index_category">
+						积分管理	
+					</h4>
 				</div>
-				<div class="span3">
-					<div class="offset-bottom"><img src="/static/misc/young-man-enjoying-his-freedomrejoicing-from-his-success-in-the.jpg" />
+				<div class="span3" align="center">
+					<!--div class="offset-bottom"><img src="/static/misc/young-man-enjoying-his-freedomrejoicing-from-his-success-in-the.jpg" /-->
+					<div class="offset-bottom"><img src="/static/Flat-UI-master/images/icons/svg/calendar.svg" />
 					</div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
-					</p>
+					<h4 class="index_category">
+						<a href="/diary/"> 学习笔记</a>
+					</h4>
 				</div>
-				<div class="span3">
-					<div class="offset-bottom"><img src="/static/misc/red-hair-fashion-girl-portrait.jpg" />
+				<div class="span3" align="center">
+					<div class="offset-bottom" ><img src="/static/Flat-UI-master/images/icons/svg/clipboard.svg" />
 					</div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu posuere leo. Pellentesque a lobortis erat. Maecenas vel metus vitae urna sollicitudin eleifend a vel elit.
-					</p>
+					<h4 class="index_category">
+						<a href="/jobs/"> 职位推荐</a>
+					</h4>
 				</div>
 			</div>
 			<!-- end row for /static/images -->
@@ -215,7 +202,7 @@
 			<div class="row-fluid offset-both">
 				<!-- column one infobox -->
 				<div class="span6">
-					<h4>Headline</h4>
+					<h4>公告区</h4>
 					<hr>
 					<div>
 						<div class="span6">
@@ -242,20 +229,21 @@
 
 				<!-- column two quotes -->
 				<div class="span6">
-					<h4>Client Testimonials</h4>
+					<h4>学员心声</h4>
 					<hr>
 					<blockquote>
-						<em>This it the best Design I have ever seen! It's based on Bootstrap so customizing was very easy and fast.</em>
-						<small><b>Peter Salt</b> <cite title="Source Title">Sept 16th, 2012 at 4:20 pm</cite></small>
+						<em>linux知识面的广而深 ，是我们自学人无法预知的。我一直很为自己的自学能力为傲，但是自学了2年的linux，一直没有实践，还是无法从事相关的工作。而跟“老男孩”老师学习后，我很快找到了相关工作，并且毕业后就找到了7500的腾讯运维。让我很兴奋，老男孩是最棒的，我会一直带着老师的精神，认真工作下去.</em>
+						<small><b>刘志强</b> <cite title="Source Title">运维工程师 | 腾讯</cite></small>
 					</blockquote>
 					<blockquote>
-						<em>This it the best Design I have ever seen! It's based on Bootstrap so customizing was very easy and fast.</em>
-						<small><b>Peter Salt</b> <cite title="Source Title">Sept 16th, 2012 at 4:20 pm</cite></small>
+						<em>时至今日，做为一名小米运维工程师，我首先要感谢“老男孩”老师，带我走到linux的世界 ，让我打下了牢固的基础，能把学习的内容运用到企业中去。其次我要感谢alex老师，在python的课程中，讲的生动，深入。让我有机会参加开源软件的开发，使我在计算机生涯中与众不同.</em>
+						<small><b>郑东旭</b> <cite title="Source Title">系统工程师 | 小米公司</cite></small>
 					</blockquote>
 					<blockquote>
-						<em>This it the best Design I have ever seen! It's based on Bootstrap so customizing was very easy and fast.</em>
-						<small><b>Peter Salt</b> <cite title="Source Title">Sept 16th, 2012 at 4:20 pm</cite></small>
+						<em>咨询过很多的Linux培训机构，培训的内容大同小异，而且价格贵，周期长。经1年的学习老男孩的课程我感觉： 1 课程体系非常丰富，知识点全面 2 课程内容具体实在，都是企业一线的生产应用案例 3 教学方法独特，先实际应用，再去深究原理 4 老男孩讲课，强调学习的方法、思想，重视学习的过程和课后总结 5 重视学生的成长进步，注重学生的个人能力的提升 6 多元化的师生互动 7 强调规范性，标准化操作，减少错误操作发生    当然“师傅领进门，修行在个人”，师傅再好，徒弟不学也是没有办法的，我的结果是我努力的果实。    在老男孩老师这学习的童鞋加油努力，更多的Money在前方等着你，不努力是拿不到的！</em>
+						<small><b>薛坤</b> <cite title="Source Title">运维主管 | 京东商城</cite></small>
 					</blockquote>
+					<a href="http://www.etiantian.org/graduate/" target="blank">More...</a>
 				</div>
 				<!-- end column two quotes -->
 			</div>
@@ -268,49 +256,36 @@
 			<div class="container">
 				<div class="row-fluid">
 					<div class="span4">
-						<h4>Recent Posts</h4>
-						<a href="index.html#">Macbook Pro for $1</a>
+						<h4>友情链接</h4>
+						<a href="http://www.etiantian.org" style="font-size:13px" target="blank">老男孩Linux</a>
 						<hr>
-						<a href="index.html#">Awesome iPad givaway</a>
+						<a href="http://triweb.sinaapp.com" style="font-size:13px" target="blank">TriAquae开源运维软件</a>
 						<hr>
-						<a href="index.html#">Sneak preview of iOS 7</a>
+						<a href="http://www.51cto.com/" style="font-size:13px" target="blank">51CTO 论坛</a>
 						<hr>
-						<a href="index.html#">Awesome portfolio web design</a>
+						<a href="http://www.chinaunix.net"  style="font-size:13px" target="blank">ChinaUnix 论坛</a>
 					</div>
 					<div class="span4">
-						<h4>Recent Tweets</h4>
+						<h4>关于我们</h4>
 
 						<ul class="unstyled" id="twitter-ticker">
 
-							<div id="tweet-container">
-								Loading..
+							<div id="tweet-container" >
+							 <p style="font-size:13px">
+							   老男孩Linux是国内少有的专注于高端Linux运维的培训的机构，我们致力于为业内中大型企业培训急需的高级Linux运维工程师、架构师、运维自动化开发工程师,百度、腾讯、阿里、新浪、SOHU、小米等国内知名企业都遍布着老男孩毕业学员.	
+							</p>	
 							</div>
 
 						</ul>
 
 					</div>
 					<div class="span4">
-						<h4>Newsletter</h4>
-						<p>
-							Subscribe to our newsletter to receive emails about new blog posts.
+						<h4>联系方式</h4>
+						<p style="font-size:13px">
+							官方群:246054962   208160987<hr>	
+							课程咨询QQ：70271111 80042789 390320151 <hr>
+							电话： 010-60747396 18600338340 18911718229
 						</p>
-						<form id="newsletter" action='index.html' method="POST">
-							<div class="row no-margin">
-								<div class="span12">
-									<input type="text" id="name" name="name" placeholder="Name" class="span12 required">
-								</div>
-							</div>
-							<div class="row no-margin">
-								<div class="span12">
-									<input type="text" id="email" name="email" placeholder="email" class="span12 required email">
-								</div>
-							</div>
-
-							<button class="btn">
-								Subscribe
-							</button>
-
-						</form>
 					</div>
 				</div>
 			</div>
