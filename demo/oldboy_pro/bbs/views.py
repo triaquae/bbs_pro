@@ -7,13 +7,15 @@ from django.contrib import comments
 import datetime,time
 from django.contrib.auth.decorators import login_required 
 from django.contrib import auth
-
+import json
 
 new_comment_dic ={}
 
 def login(request):
 	return render_to_response('login.html')
-
+def logout(request):
+	auth.logout(request)
+	return HttpResponse("<h4>You've just logged out! <a href='/'>click here</a> to go back to main page</h4>")
 def personal_info(request):
 	return render_to_response("personal_info.html", {'login_user':request.user})
 
@@ -26,6 +28,17 @@ def get_bbs_content(request,bbsid):
 	obj = bbs.objects.get(id = int(bbsid))
 	return HttpResponse(obj.content)
 
+def get_data(request):
+	print request.POST,'*****||||'
+	dataType = request.POST['dataType']
+	user_id = request.user.id
+	print user_id
+	return_list = []
+	if dataType == 'msg':
+		return_data = comments.Comment.objects.filter(web_user__user = user_id).order_by('-submit_date')[:50]
+		for i in  return_data:
+			return_list.append( (i.object_pk, i.comment, i.submit_date.strftime('%Y_%m_%d %H:%M:%S'),bbs.objects.get(id = i.object_pk).title)  )
+	return HttpResponse(json.dumps(return_list) )
 
 def add_new_article(request):
 	web_user_name = web_user.objects.get(user__username=request.user)

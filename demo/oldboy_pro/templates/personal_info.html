@@ -2,82 +2,68 @@
 <html>
 <body>
 {% block page-content%}
-
 <!-- Place inside the <head> of your HTML -->
-<script type="text/javascript" src="/static/tinymce/js/tinymce/tinymce.min.js"></script>
-<script type="text/javascript">
-
-tinymce.init({
-    selector: "textarea#elm1",
-    theme: "modern",
-    paste_data_images: true,
-    autoresize_min_height: 150,
-    autoresize_min_width: 500,
-
-    plugins: [
-         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
-         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-         "save table contextmenu directionality emoticons template paste textcolor"
-   ],
-   content_css: "/static/tinymce/js/tinymce/skins/lightgray/content.min.css",
-   toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons", 
-   style_formats: [
-        {title: 'Bold text', inline: 'b'},
-        {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
-        {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
-        {title: 'Example 1', inline: 'span', classes: 'example1'},
-        {title: 'Example 2', inline: 'span', classes: 'example2'},
-        {title: 'Table styles'},
-        {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
-    ]
- }); 
-</script>
 
 <!-- Place this in the body of the page content -->
 
-
-
- <div class="container min-height">
-	<h4> 个人中心</h4>
-        <div class="category_list blog-sidebar">
-	<ul class="category">
-			<li>
-				<a href="blog.html#">消息管理</a>
-			</li>
-			<li>
-				<a href="blog.html#">帐户管理</a>
-			</li>
-			<li>
-				<a href="blog.html#">积分管理</a>
-			</li>
-			<li>
-				<a href="blog.html#">签到记录</a>
-			</li>
-			<li>
-				<a href="blog.html#">我的帖子</a>
-			</li>
-        </ul>
-	</div>
-	<!--div class="span8">
-
-	 <form action="/upload_pic/" method="post" enctype="multipart/form-data">
-                <p>
-                    <input id="id_image" type="file" class="" name="image">
-                </p>
-                <input type="submit" value="Submit" />
-            </form>
-
-	<form method="post" action="/add_new_article/">
-	    <textarea id="elm1" name="content"></textarea>
-	     <input type="submit" value="Submit" />
-	</form>
-
-
-	</div-->
-	</div>
-</div>
-
-
+<!-- start container-->
+		<div class="container min-height">
+			<div class="row-fluid">
+				<div class="span3">
+					<div class="title2">
+						<h3>个人中心</h3>
+					</div>
+					<div class="category_list blog-sidebar">
+					 <ul class="category">
+							<li><span style="font-weight:bold">消息</span>
+								<a href="javascript:void()" onclick="getData('msg', 'my_comments')" id='my_comments'>我的评论</a>
+								<a style="color:red" href="javascript:void()"  onclick="getData('msg')">4 条新回复</a>
+							</li>
+							<li><span style="font-weight:bold">帐户</span>
+								<a href="blog.html#">信息修改</a>
+								<a href="blog.html#">密码修改</a>
+								<a href="/logout/">退出</a>
+							</li>
+							<li><span style="font-weight:bold">积分</span>
+								<a href="blog.html#">查看积分</a>
+								<a href="blog.html#">积分兑换</a>
+							</li>
+							<li><span style="font-weight:bold">签到</span>
+								<a href="blog.html#">签到记录</a>
+							</li>
+							<li><span style="font-weight:bold">帖子</span>
+								<a href="blog.html#">我的帖子</a>
+								<a href="/new_article/">发帖</a>
+							</li>
+					</ul>
+				      </div>
+				</div>
+				<div class="span9">
+					<div class="title2">
+						<h3>配置面板</h3>
+					</div>
+					<hr>
+						<div  id="pannel">  </div>
+				</div>
+			</div>
+		</div>
+	<!-- end container-->
+	<script type="text/javascript">
+		function getData(data, ele_id){
+			//alert(data);
+		  
+			 $.post('/get_data/', {dataType: data}).done(function(return_data){
+				//alert(return_data)
+				$("#"+ele_id).css("color",'green');
+				var my_msgs = JSON.parse(return_data);
+				$.each(my_msgs, function(index,value){
+					var bbs = "<a href='javascript:void()' onclick=get_bbs('bbs_"  + value[0]  + "') >" + value[3] + "</a>"
+					$("#pannel").append( "<p class='well'>" + value[2] + "&nbsp;帖子: &nbsp;&nbsp;" + bbs + "<br/>我的评论: &nbsp;&nbsp;" + value[1] + "</p>");
+				});//end each
+				//$("#pannel").html(return_data);
+			});	
+		}
+	</script>
 {%endblock%}
 
 

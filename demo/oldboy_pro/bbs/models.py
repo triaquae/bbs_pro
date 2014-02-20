@@ -15,7 +15,7 @@ class web_user(models.Model):
     class_name = models.ForeignKey('class_list')
     photo_height=models.PositiveIntegerField()
     photo_width=models.PositiveIntegerField() 
-    photo = models.ImageField(upload_to="upload_imgs/" ,height_field="photo_height",width_field="photo_width", default="user-1.jpg") 
+    photo = models.ImageField(upload_to="upload_imgs/" ,height_field="photo_height",width_field="photo_width", default="upload_imgs/user-1.jpg") 
     signature = models.CharField(max_length=150,default="lazy guy, got nothing left here...")
     def __unicode__(self):
         return '%s' % self.user
